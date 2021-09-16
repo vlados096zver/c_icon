@@ -242,7 +242,7 @@
 .header__wishlist.wishlist {
 	display: inline-block;
 	position: relative;
-	top: 2px;
+	top: 6px;
 }
 
 .header__cart.cart {
@@ -269,6 +269,7 @@
 }
 
 .header__icon {
+	display: block;
 	padding: 0 4px;
 	margin: 0 12px;
 }
