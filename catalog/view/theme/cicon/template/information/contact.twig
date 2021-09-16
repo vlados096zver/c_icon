@@ -1,0 +1,57 @@
+{{ header }}
+<div id="information-contact" class="container">
+  <ul class="breadcrumb">
+    {% for breadcrumb in breadcrumbs %}
+    <li><a href="{{ breadcrumb.href }}">{{ breadcrumb.text }}</a></li>
+    {% endfor %}
+  </ul>
+  <div class="row">{{ column_left }}
+    {% if column_left and column_right %}
+    {% set class = 'col-sm-6' %}
+    {% elseif column_left or column_right %}
+    {% set class = 'col-sm-9' %}
+    {% else %}
+    {% set class = 'col-sm-12' %}
+    {% endif %}
+    <div id="content" class="{{ class }}">{{ content_top }}
+      <h1 class="contact__h1 text-align--center">{{ heading_title }}</h1>
+      <h3 class="contact__h3   text-align--center">{{ text_location }}</h3>
+  
+      <form action="{{ action }}" method="post" enctype="multipart/form-data" class="form-horizontal contact-form">
+        <fieldset>
+         
+          <div class="form-group required">
+            <div class="col-sm-6">
+              <input type="text" name="name" value="{{ name }}" id="input-name" class="form-control" placeholder="{{ entry_name }}" />
+              {% if error_name %}
+              <div class="text-danger">{{ error_name }}</div>
+              {% endif %}
+            </div>
+
+            <div class="col-sm-6">
+              <input type="text" name="email" value="{{ email }}" id="input-email" class="form-control"  placeholder="{{ entry_email }}"/>
+              {% if error_email %}
+              <div class="text-danger">{{ error_email }}</div>
+              {% endif %}
+            </div>
+          </div>
+          <div class="form-group required">
+            <div class="col-sm-12">
+              <textarea name="enquiry" rows="7" id="input-enquiry" class="form-control" placeholder="{{ entry_enquiry }}">{{ enquiry }}</textarea>
+              {% if error_enquiry %}
+              <div class="text-danger">{{ error_enquiry }}</div>
+              {% endif %}
+            </div>
+          </div>
+          {{ captcha }}
+        </fieldset>
+        <div class="buttons">
+          <div class="pull-right">
+            <input class="btn btn-primary contact__btn" type="submit" value="{{ button_submit }}" />
+          </div>
+        </div>
+      </form>
+      {{ content_bottom }}</div>
+    {{ column_right }}</div>
+</div>
+{{ footer }}

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<!--[if IE 8 ]><html dir="{{ direction }}" lang="{{ lang }}" class="ie8"><![endif]-->
+<!--[if IE 9 ]><html dir="{{ direction }}" lang="{{ lang }}" class="ie9"><![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!-->
+<html dir="{{ direction }}" lang="{{ lang }}">
+<!--<![endif]-->
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>{{ title }}</title>
+  <base href="{{ base }}" />
+  {% if description %}
+    <meta name="description" content="{{ description }}" />
+  {% endif %}
+  {% if keywords %}
+    <meta name="keywords" content="{{ keywords }}" />
+  {% endif %}
+  <script src="catalog/view/javascript/jquery/jquery-2.1.1.min.js" type="text/javascript"></script>
+  <link href="catalog/view/javascript/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen" />
+  <script src="catalog/view/javascript/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+  <link href="catalog/view/javascript/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+  <link href="//fonts.googleapis.com/css?family=Open+Sans:400,400i,300,700" rel="stylesheet" type="text/css" />
+  <link href="catalog/view/theme/default/stylesheet/stylesheet.css" rel="stylesheet">
+  <link href="catalog/view/theme/cicon/css/style.min.css" rel="stylesheet">
+  {% for style in styles %}
+    <link href="{{ style.href }}" type="text/css" rel="{{ style.rel }}" media="{{ style.media }}" />
+  {% endfor %}
+  {% for script in scripts %}
+    <script src="{{ script }}" type="text/javascript"></script>
+  {% endfor %}
+  <script src="catalog/view/javascript/common.js" type="text/javascript"></script>
+  {% for link in links %}
+    <link href="{{ link.href }}" rel="{{ link.rel }}" />
+  {% endfor %}
+  {% for analytic in analytics %}
+    {{ analytic }}
+  {% endfor %}
+</head>
+<body> 
+  <header class="header">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-xs-2 hidden-lg hidden-md mobile__menu "><img src="catalog/view/theme/cicon/image/menu.svg" alt="меню"></div>
+        <div class="header__left-content header__content col-md-10 col-xs-8">
+          <div class="header__logo" id="logo">
+          {% if logo %}
+            <a href="{{ home }}"><img src="{{ logo }}" title="{{ name }}" alt="{{ name }}" class="img-responsive" /></a>
+          {% else %}
+            <div><a href="{{ home }}">{{ name }}</a></div>
+          {% endif %}
+          </div>
+
+          {# jd todo Наступне можна перенести в модуль меню #}
+          <div class="header__nav nav">
+            <ul class="nav__items">
+              {# jd todo лінки і тексти в контроллер #}
+              <li class="nav__item"><a href="/" class="nav__link">Головна</a></li>
+              <li class="nav__item"><a href="/index.php?route=information/information&information_id=4" class="nav__link">Про нас</a></li>
+              <li class="nav__item nav__item-dropdown">
+                <button class="nav__link nav__link--button">Купити онлайн</button>
+                <i class="fa fa-angle-down i-open"></i>
+                {{ menu }}
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="header__right-content header__content col-md-2 col-xs-2">
+          <div class="header__wishlist wishlist">
+            <a class="wishlist__link header__icon" href="{{ wishlist }}" id="wishlist-total" title="{{ text_wishlist }}"><img src="catalog/view/theme/cicon/image/wishlist.svg" alt="{{ text_wishlist }}"></a>
+          </div>
+          <div class="header__cart cart">
+            {{ cart }}
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+{#  jd todo Перенести в модуль newsletter і розмістити у футері #}
+<div class="newsletter-popup newsletter">
+  <div class="newsletter__wrapper">
+    <button class="newsletter-popup__close"><img src="catalog/view/theme/cicon/image/close.svg" alt="X"></button>
+    <div class="newsletter__image-wrapper">
+      <img src="catalog/view/theme/cicon/image/popup-image.jpg" alt="Newsletter" class="newsletter__image">
+    </div>
+    <div class="newsletter__info">
+      <p class="newsletter__title">ПІДПИШІТЬСЯ НА РОЗСИЛКУ</p>
+      <p class="newsletter__subtitle">Підпишись та отримай 10% знижку на першу покупку</p>
+       <form class="newsletter__form-wrapper form">
+          <input type="email" placeholder="Введіть e-mail" name="Подписаться на розсилку" class="form__input input">
+          <button type="submit" class="form__button">НАДІСЛАТИ</button>
+       </form>
+    </div>
+  </div>
+</div>
+{#
+  <section class="container-fluid banner-container s-banner">
+    <div class="banner">
+      <img src="image/catalog/banner/banner-1.jpg" alt="">
+    </div>
+  </section>
+#}

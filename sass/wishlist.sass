@@ -1,0 +1,42 @@
+@import "vars"
+
+.h1-wishlist 
+	margin-bottom: 20px 
+	color: $black
+	letter-spacing: 0.96px
+.wishlist 
+	.buttons.clearfix  
+		margin-right: 15px
+.wishlist__product
+	.cart__item 
+		.cart__image.cart--image.cart__image--wishlist a 
+			img
+				width: 100%
+		.cart__price.cart--price.cart__price--wishlist 
+			.price 
+				.price__old 
+					text-decoration: line-through 
+				.price__new 
+					color: #b40808
+		.cart__total-price.cart--total.cart__total-price--wishlist 
+			display: flex 
+			align-items: center  
+			padding-left: 0 
+			flex-basis: auto
+			button 
+				padding: 6px 25px
+				background-color: transparent 
+				border: 1px solid $black 
+				color: $black
+			.product-stock  
+				text-transform: uppercase 
+				color: rgb(167, 167, 167) 
+				letter-spacing: 1.4px 
+				margin-right: 10px
+		.cart__remove.cart__remove--wishlist 
+			a 
+				border: 0
+				box-shadow: none 
+				i 
+					font-size: 11px
+

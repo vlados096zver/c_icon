@@ -1,0 +1,236 @@
+@import "vars"
+
+.simple_h1
+    text-align: center
+    margin-bottom: 50px
+.simple-content 
+    font-size: 14px
+    color: #000
+    line-height: 1.3em
+    letter-spacing: 1.4px
+    font-family: $default-font
+    .checkout-heading
+        background-color: transparent !important
+        h3
+            display: inline-block
+            font-weight: bold
+            margin: 0
+#simplecheckout_customer
+    .checkout-heading
+        display: flex
+        align-items: center
+        justify-content: space-between
+        
+        span
+            margin-left: auto
+        a
+           color: #000
+           &:hover,&:focus
+               color: #000
+
+.simplecheckout-cart
+    border: none !important
+.simplecheckout-cart th
+    
+    font-family: opensansSM
+    font-size: 14px
+    text-transform: uppercase
+    font-weight: 600
+    color: #000
+    letter-spacing: 1.4px
+    background-color: #fff !important
+    text-align: center !important
+    border: none !important
+  
+
+.simplecheckout-cart td
+    font-family: $default-font
+    font-size: 14px
+    text-transform: uppercase
+    color: #000
+    letter-spacing: 1.4px
+    vertical-align: middle !important
+    text-align: center !important
+    border-bottom: none !important
+    a
+        color: $black
+        transition: all .2s ease
+        &:hover,&:focus
+            color: #bf5c30
+
+div.cart__quantity
+    display: flex
+    align-self: center
+    height: 100%
+    .cart__btn
+        border: 1px solid #f3f3f3
+        background-color: transparent
+        height: 40px
+        line-height: 16px
+        padding: 10px 15px
+        font-size: 14px
+        color: $black
+        transition: .2s linear color
+        &:hover
+            color: #bf5c30
+        &--plus
+            border-left: none
+        &--minus
+            border-right: none
+    input.form-control 
+        max-width: 40px
+        width: 100% 
+        height: 40px 
+        line-height: auto
+        border-radius: 0
+        border: 1px solid #f3f3f3
+        border-left: none
+        border-right: none
+        box-shadow: none
+        display: inline
+        font-size:  14px
+        text-align: center
+// .simplecheckout-cart td.remove
+//     .btn 
+//         background: 0 0
+//         border: none
+//         box-shadow: none
+//         i
+//             color: #000
+//             transition: all .2s ease
+//             &:hover,&:focus
+//                 color: #bf5c30
+
+
+.simple-wrapper
+    display: flex
+    flex-direction: row-reverse
+    margin: 0 -15px
+    &__totals,&__coupons
+        padding: 0 15px
+        flex: 1 0 50%
+    &__totals
+        text-transform: uppercase
+        font-size: 14px
+        color: #000
+        line-height: 1.3em
+        letter-spacing: 1.4px
+        font-family: opensansSM
+        .simplecheckout-cart-total
+            display: flex
+            justify-content: space-between
+            border: none
+            span
+                text-align: left
+                b
+                    margin-right: 15px
+            .simplecheckout-cart-total-value
+                margin-left: auto
+            .simplecheckout-cart-total-remove
+                display: none
+    &__coupons
+        .simplecheckout-cart-total
+            border: none
+            .inputs.buttons
+                display: block !important
+                margin: 0 !important
+           
+        .form-control
+            max-width: 100%
+            width: 100%
+            height: 40px
+            border: 1px solid #c2af96
+            font-size: 14px
+            margin: 0
+            padding: 10px 20px
+            line-height: 18px
+            border-radius: 0
+   
+       
+
+.simplecheckout-block   
+    .form-group .control-label
+        display: none !important
+    .row-customer_register 
+        display: flex
+        align-items: center
+        .control-label
+            width: 15%
+            display: block !important
+            text-last: left
+            font-size: 14px
+            color: #000
+            line-height: 1.3em
+            letter-spacing: 1.4px
+            font-family: $default-font
+    .col-sm-8
+        width: 100%
+    .form-control
+        max-width: 100%
+        width: 100%
+        height: 40px
+        border: 1px solid #c2af96
+        font-size: 14px
+        margin: 0
+        padding: 10px 20px
+        line-height: 18px
+        border-radius: 0
+        box-shadow: none !important
+        resize: none
+
+#simplecheckout_shipping_address
+    margin-bottom: 0
+#buttons
+    max-width: 80%
+    margin: 40px auto
+    padding: 0
+    .simplecheckout-button-right
+        display: flex
+        flex-direction: column
+        justify-content: center
+        float: inherit 
+        .button 
+            font-size: 16px
+            padding: 8px 5px
+#agreement_checkbox 
+    // margin-right: 0 !important
+    margin-bottom: 20px   
+    
+    .checkbox
+        float: inherit 
+        text-align: center
+        display: flex
+        justify-content: center
+        width: 100%
+    label
+        font-size: 16px
+        a
+            color: $accent
+            transition: .2s ease all
+            &:hover,&:focus
+                
+                color: darken($accent,15%)
+
+       
+#simple_login 
+    border: 0  !important
+    border-radius: 0 !important
+#simple_login_header 
+    margin-bottom: 10px 
+.simple-content fieldset
+    margin: 10px 0 !important 
+    .form-group 
+        a 
+            margin-top: 10px
+            display: inline-block 
+            color: $black 
+            &:hover 
+                text-decoration: underline 
+.alert.alert-danger.simplecheckout-warning-block 
+    padding-right: 50px 
+    border-color: $accent
+    border-radius: 0 
+    button  
+        top: 2px
+        
+

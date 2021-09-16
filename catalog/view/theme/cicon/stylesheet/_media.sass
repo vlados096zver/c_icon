@@ -1,0 +1,407 @@
+@import "bourbon"
+@import "vars"
+
+@media only screen and (min-width: 1400px) 
+	.container 
+		width: 1300px
+		padding: 0  
+@media only screen and (max-width: 1300px)  
+	.container 
+		width: 1100px
+		padding: 0 
+	.slideshow 
+		.swiper-container .slideshow-wrapper .slideshow-slide  
+			a 
+				img 
+					object-fit: none 
+					object-position: 15% 0%
+@media only screen and (max-width: 1200px)  
+	.container 
+		width: 950px
+		padding: 0  
+	.wishlist__product .cart__item .cart__total-price.cart--total.cart__total-price--wishlist 
+		flex-direction: column  
+		align-items: flex-start
+		.product-stock 
+			margin-right: 0 
+			margin-bottom: 10px
+
+@media only screen and (max-width: 1024px)  
+	.container 
+		width: 768px
+		padding: 0 
+@media only screen and (max-width: 991px)
+	.cart-popup__wrapper 
+		display: none !important  
+	.category-wrapper
+        padding-top: 20px
+	.cart--image
+		flex: 0 0 140px
+	.cart__quantity 
+		.cart__btn
+			padding: 5px 8px
+		input 
+			padding: 5px 8px
+	.header 
+		padding: 13px 0
+	.header__nav 
+		position: absolute 
+		top: 100%
+		background-color: #fff 
+		z-index: -1
+		width: 100% 
+		padding: 0 80px
+		visibility: hidden 
+		opacity: 0 
+		transition: visibility .2s ease, opacity .2s ease
+		border: 
+			top: 1px solid rgb(225, 225, 225)
+			bottom: 1px solid rgb(225, 225, 225)
+		.nav__items 
+			width: 100% 
+			display: flex
+			flex-direction: column
+			padding: 0 0 20px
+			.nav__item  
+				border-bottom: 1px solid rgb(225, 225, 225)
+				padding: 0
+				opacity: 1 
+				visibility: visible 
+				z-index: 100
+				a 
+					display: block
+					padding: 9px 
+					font-size: 11px 
+					letter-spacing: 2.2px
+					line-height: 24px 
+					i 
+						position: absolute 
+						right: 0
+						top: 15px
+				.navbar 
+					visibility: visible 
+					z-index: 100 
+					opacity: 1
+					display: none !important				
+			.nav__item-dropdown 
+				border-bottom: 0
+				a 
+					width: 80%
+					display: inline-block
+				i 
+					position: absolute 
+					right: 0 
+					top: -6px 
+					display: inline-block 
+					padding: 20px
+					font-size: 17px
+					color: $black 
+				.navbar.active 
+					position: relative
+					display: block !important	
+					box-shadow: none
+					.navbar-collapse.navbar-ex1-collapse 
+						.nav.navbar-nav 
+							margin: 0 
+							padding-left: 15px
+							li
+								border-bottom: 1px solid #e1e1e1
+								a 
+									padding-left: 0 !important
+									border-bottom: 0 
+							.dropdown
+								.see-all-subcat 
+									position: absolute
+									right: 0
+									width: auto 
+									display: inline-block 
+									top: 3px 
+									background-color: transparent !important
+									i 
+										top: 0 
+								.dropdown-menu 
+									position: relative
+									left: 0
+									visibility: visible  
+									opacity: 1
+									width: 100% 
+									box-shadow: none
+									margin-bottom: 10px
+									display: none !important 
+									background-color: transparent !important
+							.dropdown.open   
+								a 
+									background-color: transparent !important
+								.dropdown-menu 
+									display: block !important
+									.dropdown-inner 
+										width: 100% 
+										ul 
+											padding-left: 15px
+											li 
+												&:last-child 
+													border-bottom: 0 
+								.see-all-subcat 
+									i 
+										color: $accent
+
+	.nav__item .navbar .navbar-collapse.navbar-ex1-collapse .nav.navbar-nav .dropdown::before 
+		display: none
+
+
+	.header__wishlist.wishlist 
+		display: none
+	.header__right-content
+		text-align: left  
+	.mobile__menu
+		text-align: right
+	.header__left-content 
+		justify-content: center 
+		height: 42px
+		position: inherit
+	#logo 
+		margin: 0 
+	.header__nav.active 
+		visibility: visible 
+		opacity: 1
+		z-index: 100 
+		box-shadow: 0 1px 2px rgba(0,0,0,.2)
+
+@media only screen and (max-width: 830px)   
+	.newsletter-popup  
+		width: 100%
+@media only screen and (max-width: 768px)  
+	.container 
+		width: 600px
+		padding: 0 
+	.sibscribe  
+		margin-bottom: 40px
+	.image-additional__wrapper 
+		display: flex 
+		align-items: center 
+		overflow-x: scroll
+		li 
+			flex-shrink: 0
+	.product__description 
+		padding-top: 0
+	.product__row .product__picture 
+		padding: 0 15px
+	.product__info-wrapper .button.button-wishlist.button-wishlist--product 
+		right: 5px 
+		top: 0 
+	// category main
+	.nav__item 
+		padding-left: 0
+
+	.category-main__name 
+		position: absolute 
+		bottom: 10px 
+		left: 50% 
+		transform: translateX(-50%)
+		width: 100% 
+		color: #fff 
+		font-size: 16px
+		width: 90%
+	.category-main__link 
+		display: none
+	.category-main__item 
+		margin-bottom: 15px
+	.category-main__item:nth-child(3) 
+		max-height: 250px
+		overflow-x: hidden
+		.category-main__img 
+			height: 250px 
+			width: 100% 
+			object-fit: cover 
+			object-position: 100% 0% 
+	.newsletter__wrapper 
+		display: none 
+
+	// category main
+
+	// gift 
+	.gift__wrapper	
+		display: flex 
+		flex-direction: column
+	.gift__img-wrapper,.gift__info 
+		padding: 0
+	.gift__img-wrapper 
+	 	max-width: 100% 
+	 	margin: 0 auto 
+	 	margin-bottom: 50px
+
+	// gift 
+	.category__sort 
+		.form-control 
+			float: none 
+			padding-left: 0 
+	.category-wrapper
+		#column-left 
+			display: none 
+	.category__pagination 
+		text-align: center 
+		.pagination 
+			li 
+				a,span 
+					margin-right: 5px 
+	// cart
+
+	.cart__header
+		display: none
+	.cart-body__text
+		padding-left: 0
+	.cart__item
+		display: grid
+		grid-template-columns: auto auto auto min-content  
+		grid-template-areas: "img name name name""img options options options" "img quantity total remove"
+		column-gap: 15px
+	.cart--image
+		grid-area: img
+	.cart--name
+		grid-area: name
+	.cart--options
+		grid-area: options
+	.cart--price
+		display: none
+	.cart--quanity
+		grid-area: quantity
+	.cart--total
+		grid-area: total
+	.cart--remove
+		grid-area: remove
+	.cart__quantity
+		height: auto
+		align-items: center
+	.cart__bottom
+		flex-direction: column
+	.cart__coupon-wrapper 
+		width: 100%
+		margin-bottom: 20px
+		.cart__coupon
+			max-width: 50%
+		.cart__coupon-btn-submit
+			max-width: 50%
+			width: 100%
+			input
+				width: 100%
+	.cart__bottom
+		padding-right: 0
+	.cart__total-sum
+		width: 100%
+	.cart__btn-checkout-wrapper 
+		margin: 20px 0
+		a
+			width: 100% !important
+
+	// cart
+
+	// about-us
+
+	.about-us
+		display: flex
+		flex-direction: column
+	.about-us__img-wrapper,.about-us__info
+		padding: 0
+	.about-us__img-wrapper
+		max-width: 80%
+		margin: 0 auto
+		margin-bottom: 50px
+	// about-us
+
+	// simple
+
+	.simple-wrapper
+		flex-direction: column
+		&__coupons
+			.simplecheckout-cart-total
+				border: none
+				.inputs.buttons
+					display: block !important
+					margin: 0 !important
+					a 
+						width: 100%
+
+	.simplecheckout-block .row-customer_register 
+		.control-label
+			width: 25%
+		.radio
+			padding-top: 2px
+	#buttons
+		max-width: 100%
+	// simple
+
+
+
+@media only screen and (max-width: 680px)  
+	.container 
+		width: 420px
+		padding: 0 
+
+@media (max-width: 480px) 
+	.container
+		margin: 0 auto
+		width: calc(100% - 30px)
+	.form__input 
+		min-width: 150px
+	.subscribe__form-wrapper 
+		padding: 0
+	.h3, h3 
+		font-size: 18px
+	.footer__container 
+		padding: 25px
+	.footer 
+		margin-top: 0
+	.product-row 
+		margin-top: 30px
+	.h1.h1--product 
+		font-size: 18px
+	.product__info-wrapper .product__price-wrapper 
+		.price,.price__new,.price__old
+			font-size: 14px
+	.product__row 
+		padding: 30px 0
+	// category main
+	.category-main__item   
+		padding: 0 3px 
+	// category main 
+	.header__right-content 
+		text-align: right 
+	.mobile__menu 
+		text-align: left 
+	.header__nav 
+		padding: 0 15px 
+		overflow: hidden 
+	// gift 
+	.gift__img-wrapper 
+		max-width: 100% 
+	.gift__h1 
+		font-size: 18px
+	// gift
+	.cart__item
+		grid-template-areas: "img name name name" "img options options options" "img quantity quantity quantity" "img total total remove"  
+		gap: 10px 15px 
+	.cart__coupon-wrapper .cart__coupon-btn-submit #button-coupon
+		padding: 5px
+	.btn.btn-primary.cart__btn-checkout
+		padding: 5px 10px
+	.about-us__img-wrapper
+		max-width: 100%
+	.about-us__title
+		font-size: 18px
+	.caption 
+		.price-new
+			margin-right: 0
+			display: block
+		h4  
+			padding-right: 30px
+	.product-thumb .price-old
+		margin-left: 0 
+	.h1-wishlist  
+		font-size: 18px 
+	.simple_h1 
+		font-size: 18px 
+	.alert.alert-danger.simplecheckout-warning-block 
+		padding-right: 25px
+@media screen and ( max-width:  360px)     
+    .cart__item
+        grid-template-columns: 130px auto auto min-content 

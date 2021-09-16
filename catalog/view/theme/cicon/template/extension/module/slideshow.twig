@@ -1,0 +1,27 @@
+<div class="slideshow">
+  <div id="slideshow{{ module }}" class="swiper-container">
+    <div class="swiper-wrapper slideshow-wrapper"> {% for banner in banners %}
+      <div class="swiper-slide text-center slideshow-slide">{% if banner.link %}<a href="{{ banner.link }}"><img src="{{ banner.image }}" alt="{{ banner.title }}" class="" /></a>{% else %}<img src="{{ banner.image }}" alt="{{ banner.title }}" class="" />{% endif %}</div>
+      {% endfor %} 
+    </div>
+  </div>
+  <div class="swiper-pagination slideshow{{ module }}"></div>
+  <div class="swiper-pager__custom">
+    <div class="swiper-button__prev"><img src="catalog/view/theme/cicon/image/slider/arrow-left.svg" alt="left"></div>
+    <div class="swiper-button__next"><img src="catalog/view/theme/cicon/image/slider/arrow-right.svg" alt="right"></div>
+  </div>
+</div>
+
+<script type="text/javascript"><!--
+$('#slideshow{{ module }}').swiper({
+	mode: 'horizontal',
+	slidesPerView: 1,
+	paginationClickable: true,
+	nextButton: '.slideshow .swiper-pager__custom .swiper-button__next',
+    prevButton: '.slideshow .swiper-pager__custom .swiper-button__prev',
+    spaceBetween: 30,
+	// autoplay: 2500,
+  autoplayDisableOnInteraction: true,
+	loop: true
+});
+//--></script>

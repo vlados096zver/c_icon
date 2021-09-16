@@ -1,0 +1,179 @@
+.product__row 
+	padding: 100px 0 150px 0
+	.thumbnails 
+		li 
+			.thumbnail 
+				border: 0 
+				padding: 0 
+				margin-bottom: 10px 
+		.image-additional 
+			padding: 10px 
+			margin-left: 0
+			max-width: 100% 
+			margin-right: 10px
+	.product__picture 
+		padding-right: 60px
+		.nav.nav-tabs, .tab-content 
+			display: none
+.product__info-wrapper
+	position: relative
+	.button.button-wishlist.button-wishlist--product
+		position: absolute 
+		right: 0
+		top: 3px 
+	h1 
+		margin-top: 0
+		font-family: "opensansSM"
+		font-weight: 600 
+		letter-spacing: 0.96px 
+		color: $black
+		font-size: 32px
+	.product__price-wrapper  
+		margin-bottom: 25px
+		.price,.price__new
+			font-weight: 500 
+			font-size: 24px
+			letter-spacing: 1.4px 
+			line-height: 25px
+			color: $black 
+			margin-right: 15px
+		.price__old 
+			text-decoration: line-through 
+			font-size: 20px 
+			color: $black 
+		.price__new
+			color: rgb(180, 8, 8)
+		.price__tax,.price__points,.price__discount 
+			display: none
+	.info 
+		margin-bottom: 33px
+		.info__item 
+			margin-bottom: 20px
+		.info__title 
+			font-size: 14px 
+			color: $black 
+			line-height: 26px 
+			font-weight: 500
+			display: block
+			text-transform: uppercase
+		.info__text 
+			color: #a7a7a7  
+			letter-spacing: 1.4px 
+			line-height: 25px
+		.info__text-special 
+			text-transform: uppercase
+	.rating 
+		display: none 
+.product__description 
+	margin-bottom: 25px
+	padding-top: 25px
+	p 
+		color: $black 
+		line-height: 1.4 
+		letter-spacing: 1.4px
+.product__option 
+	.option__size-table 
+		text-align: right
+		margin-bottom: 14px
+		.button__size 
+			background-color: transparent 
+			border: 0
+			color: $black 
+			text-decoration: underline 
+	.option 
+		margin-bottom: 15px
+		.option__label--select 
+			display: none
+		.option__select 
+			border-radius: 0 
+			border: 1px solid rgb(167, 167, 167)
+			padding: 7px 10px
+			min-height: 40px
+			box-shadow: none 
+			letter-spacing: 1.4px 
+			line-height: 24px
+			color: rgb(117, 117, 117)
+.product__btn  
+	.product__btn-title 
+		display: none
+	.product__btn-quantity 
+		margin-right: 40px
+		padding: 4px 
+		border-radius: 0 
+		border: 1px solid #c2af96
+		color: $black 
+		text-align: center
+		min-width: 50px
+		display: none
+	.btn.btn-primary.btn-lg.btn-block.product__btn-cart 
+		background-color: rgb(194, 175, 150) 
+		background-image: none 
+		border: 0
+		border-radius: 0 
+		box-shadow: none
+		text-shadow: none
+		color: #fff 
+		letter-spacing: 2.2px 
+		font-size: 11px
+		text-transform: uppercase
+		transition: background-color .2s ease
+		width: 100%
+		&:hover 
+			background-color: lighten(rgb(194, 175, 150),5%)
+		&:focus 
+			background-color: darken(rgb(194, 175, 150),5%)
+			transform: translateY(1px)
+.h1--product 
+	margin-bottom: 20px
+
+
+// Size popup
+
+.size__popup.active 
+	opacity: 1
+	visibility: visible 
+	z-index: 100
+.size__popup 
+	position: fixed
+	top: 0
+	right: 0
+	left: 0
+	bottom: 0
+	background-color: rgba(120, 120, 120, 0.7) 
+	z-index: -1
+	opacity: 0
+	visibility: hidden
+	display: flex 
+	align-items: center 
+	justify-content: center
+	transition: visibility .2s ease, opacity .2s ease
+	will-change: opacity
+.size__popup-inner 
+	background-color: #fff
+	padding: 44px
+	width: 80%
+	position: relative
+.size__popup-title 
+	color: $black 
+	text-align: center 
+	font-size: 24px 
+	line-height: 36px 
+.size__popup-close 
+	background-color: transparent 
+	border: 0
+	font-size: 30px 
+	line-height: 36px 
+	position: absolute 
+	top: 0 
+	right: 0 
+	width: 55px 
+	height: 50px 
+	color: $black
+.size__popup-img 
+	width: 100%
+
+
+
+// Size popup
+
+				

@@ -1,0 +1,195 @@
+<div class="simplecheckout-block" id="simplecheckout_cart" {{ hide ? 'data-hide="true"' : '' }} {{ has_error ? 'data-error="true"' : '' }}>
+{% if display_header %}
+    <div class="checkout-heading panel-heading">{{ text_cart }}</div>
+{% endif %}
+{% if attention %}
+    <div class="alert alert-danger simplecheckout-warning-block">
+        {{ attention }}  
+        <button type="button" class="close" data-dismiss="alert">&times;</button>
+    </div>
+{% endif %}
+{% if error_warning %}
+    <div class="alert alert-danger simplecheckout-warning-block">
+        {{ error_warning }} 
+        <button type="button" class="close" data-dismiss="alert">&times;</button>
+    </div>
+{% endif %}
+<div class="cart__table">
+    <div class="cart__header">
+        <div class="text-center cart--image"></div>
+        <div class="text-left cart--name cart-header__text">{{ column_name }}</div>
+        <div class="text-left cart--options cart-header__text">{{ column_model }}</div>
+        <div class="text-left cart--price cart-header__text"> {{ column_quantity }}</div>
+        <div class="text-left cart--quanity cart-header__text"> {{ column_price }}</div>
+        <div class="text-left cart--total  cart-header__text">  {{ column_total }}</div>
+        <div class="text-left cart--remove cart-header__text"></div>
+    </div>
+    <div class="cart__body">
+        {% for product in products %}
+            {#
+                 {% if product['recurring'] is not empty %}
+                    <tr>
+                        <td class="simplecheckout-recurring-product" style="border:none;"><img src="{{ additional_path }}catalog/view/theme/default/image/reorder.png" alt="" title="" style="float:left;" />
+                            <span style="float:left;line-height:18px; margin-left:10px;">
+                            <strong>{{ text_recurring_item }}</strong>
+                            {{ product['profile_description'] }}
+                            </span>
+                        </td>
+                    </tr>
+                {% endif %} 
+            #}
+            <div class="cart__item">
+                <div class="text-center cart__image  cart--image">
+                    {% if product['thumb'] %}
+                        <a href="{{ product['href'] }}"><img src="{{ product['thumb'] }}" alt="{{ product['name'] }}" title="{{ product['name'] }}" /></a>
+                    {% endif %}
+                </div>
+
+                <div class="text-left cart__name cart-body__text  cart--name">
+                    {# 
+                        {% if product['thumb'] %}
+                        <div class="image">
+                            <a href="{{ product['href'] }}"><img src="{{ product['thumb'] }}" alt="{{ product['name'] }}" title="{{ product['name'] }}" /></a>
+                        </div>
+                    {% endif %} 
+
+                    #}
+
+                    <a href="{{ product['href'] }}">{{ product['name'] }}</a>
+                    {% if not product['stock'] and (config_stock_warning or not config_stock_checkout) %}
+                        <span class="product-warning">***</span>
+                    {% endif %}
+                </div>
+                <div class="text-left cart__option cart-body__text  cart--options">
+                    {% for option in product['option'] %}
+                        {{ option['name'] }}: {{ option['value'] }}
+                    {% endfor %}
+                    {% if product['recurring'] is not empty %}
+                        {{ text_payment_profile }}: {{ product['profile_name'] }}
+                    {% endif %}
+                    {% if product['reward'] %}
+                        {{ product['reward'] }}
+                    {% endif %}
+                </div>
+
+                {# 
+                <div class="simple-body__model cart-body__text">{{ product['model'] }}</div> 
+                #}
+                
+                <div class="text-left cart__price cart-body__text  cart--price">
+                    {% if product['old_price'] is not empty %}
+                        <div class="price__old" style="text-decoration: line-through;">{{ product['old_price'] }}</div>
+                    {% endif %}
+                    <div class="price__new">{{ product['price'] }}</div>
+                </div>
+                <div class="text-left cart__quantity quantity  cart-body__text  cart--quanity">
+                   
+                            <button class="cart__btn cart__btn--minus" data-onclick="decreaseProductQuantity" data-toggle="tooltip" type="submit">
+                                -
+                            </button>
+                       
+                        <input class="form-control" type="text" data-onchange="changeProductQuantity" {{ quantity_step_as_minimum ? 'data-minimum="' ~ product['minimum'] ~ '"' : '' }} name="quantity[{{ product['cart_id'] is not empty ? product['cart_id'] : product['key'] }}]" value="{{ product['quantity'] }}" size="1" />
+                      
+                            <button class="cart__btn cart__btn--plus" data-onclick="increaseProductQuantity" data-toggle="tooltip" type="submit">
+                                +
+                            </button>
+                            
+                       
+                 
+                </div>
+
+
+             
+                <div class="text-left cart__total-price cart-body__text  cart--total">{{ product['total'] }}</div>
+
+                <div class="text-left cart-body__text cart__remove  cart--remove">
+                    <button class="btn btn-danger" data-onclick="removeProduct" data-product-key="{{ product['cart_id'] is not empty ? product['cart_id'] : product['key'] }}" data-toggle="tooltip" type="button">
+                        <i class="fa fa-times"></i>
+                    </button>
+                </div>
+            </div>
+        {% endfor %}
+        {% for voucher_info in vouchers %}
+            <tr>
+                <td class="image"></td>
+                <td class="name">{{ voucher_info['description'] }}</td>
+                <td class="model"></td>
+                <td class="quantity">
+                    <div class="input-group btn-block" style="max-width: 200px;">
+                        <input class="form-control" type="text" disabled value="1" size="1" />
+                        <span class="input-group-btn">
+                            <button class="btn btn-danger" data-onclick="removeGift" data-gift-key="{{ voucher_info['key'] }}" title="{{ button_remove }}" type="button">
+                                <i class="fa fa-times-circle"></i>
+                            </button>
+                        </span>
+                    </div>
+                </td>
+                <td class="price">{{ voucher_info['amount'] }}</td>
+                <td class="total">{{ voucher_info['amount'] }}</td>
+                <td class="remove">
+                    
+                </td>
+            </tr>
+        {% endfor %}
+    </div>
+</div>
+<div class="simple-wrapper">
+    <div class="simple-wrapper__totals">
+        {% for total in totals %}
+            <div class="simplecheckout-cart-total" id="total_{{ total['code'] }}">
+                <span><b>{{ total['title'] }}:</b></span>
+                <span class="simplecheckout-cart-total-value">{{ total['text'] }}</span>
+                <span class="simplecheckout-cart-total-remove">
+                    {% if total['code'] == 'coupon' %}
+                        <i data-onclick="removeCoupon" title="{{ button_remove }}" class="fa fa-times-circle"></i>
+                    {% endif %}
+                    {% if total['code'] == 'voucher' %}
+                        <i data-onclick="removeVoucher" title="{{ button_remove }}" class="fa fa-times-circle"></i>
+                    {% endif %}
+                    {% if total['code'] == 'reward' %}
+                        <i data-onclick="removeReward" title="{{ button_remove }}" class="fa fa-times-circle"></i>
+                    {% endif %}
+                </span>
+            </div>
+        {% endfor %}
+    </div>
+    <div class="simple-wrapper__coupons">
+        {% if modules['coupon'] is defined %}
+        <div class="simplecheckout-cart-total">
+           <input class="form-control" type="text" data-onchange="reloadAll" name="coupon" value="{{ coupon }}" placeholder="{{ entry_coupon }}" />
+        </div>
+        {% endif %}
+        {% if modules['reward'] is defined and points > 0 %}
+            <div class="simplecheckout-cart-total">
+               <input class="form-control" type="text" name="reward" data-onchange="reloadAll" value="{{ reward }}" placeholder="{{ entry_reward }}" />
+            </div>
+        {% endif %}
+        {% if modules['voucher'] is defined %}
+            <div class="simplecheckout-cart-total">
+                <input class="form-control" type="text" name="voucher" data-onchange="reloadAll" value="{{ voucher }}" placeholder="{{ entry_voucher }}"/>
+            </div>
+        {% endif %}
+        {% if modules['coupon'] is defined or (modules['reward'] is defined and points > 0) or modules['voucher'] is defined %}
+            <div class="simplecheckout-cart-total simplecheckout-cart-buttons">
+                <span class="inputs buttons"><a id="simplecheckout_button_cart" data-onclick="reloadAll" class="button btn-primary button_oc btn"><span>{{ button_update }}</span></a></span>
+            </div>
+        {% endif %}
+        <input type="hidden" name="remove" value="" id="simplecheckout_remove">
+        <div style="display:none;" id="simplecheckout_cart_total">{{ cart_total }}</div>
+    </div>
+</div>
+
+
+{% if display_weight %}
+    <div style="display:none;" id="simplecheckout_cart_weight">{{ weight }}</div>
+{% endif %}
+{% if not display_model %}
+    <style>
+    .simplecheckout-cart col.model,
+    .simplecheckout-cart th.model,
+    .simplecheckout-cart td.model {
+        display: none;
+    }
+    </style>
+{% endif %}
+</div>

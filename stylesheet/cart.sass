@@ -1,0 +1,342 @@
+// cart popup
+
+.btn-group.btn-block.open
+    .cart-popup__wrapper 
+        visibility: visible 
+        z-index: 100 
+        opacity: 1 
+        cursor: url('../image/cancel.png'), auto
+        .dropdown-menu.pull-right  
+            transform: translateX(0) 
+    .dropdown-backdrop 
+        z-index: 20
+
+#cart .dropdown-menu 
+    min-width: 430px
+    background-color: #fff
+    overflow-y: auto 
+    li p 
+        margin: 0 
+
+.cart-popup__wrapper 
+    position: fixed 
+    top: 0 
+    right: 0
+    left: 0
+    bottom: 0
+    z-index: -1
+    opacity: 0 
+    visibility: hidden
+    background-color: rgba(0,0,0,.3)
+    display: flex 
+    justify-content: flex-end
+    transition: visibility .2s ease, opacity .2s ease
+    .pull-right 
+        position: relative 
+        margin: 0 
+        max-width: 430px 
+        float: none !important 
+        top: 0
+        border: 0 
+        padding: 40px 0 30px
+        box-shadow: -3px 3px 8px 0 rgba(0,0,0,.4)
+        will-change: transform 
+        transition: all .6s cubic-bezier(.77,0,.175,1)
+        transform: translateX(102%)
+        display: block
+        cursor: auto
+        border-radius: 0 
+        li 
+            p    
+                letter-spacing: 1.4px 
+                line-height: 25px  
+            p.cart-popup__empty 
+                color: $black 
+.cart-popup__items 
+    padding-bottom: 21px
+.cart-popup__item 
+    display: flex
+    position: relative
+    padding: 10px 0
+.cart-popup__product-info 
+    padding-left: 20px
+    padding-top: 15px
+.cart-popup__delete 
+    position: absolute 
+    top: 0px 
+    right: 0
+    button 
+        background-color: transparent 
+        border: 0 
+        color: $black
+        background-image: none 
+        text-shadow: none
+        box-shadow: none
+        font-size: 20px  
+        &:hover 
+            background-color: transparent !important 
+            box-shadow: none
+            color: $accent
+.cart-popup__image-wrapper  
+    width: 100px 
+    height: 100px
+    a img 
+        border: 0  
+.cart-popup__title  
+    line-height: 1 
+    a
+        color: $black 
+        text-transform: uppercase 
+        letter-spacing: .98px 
+        line-height: 24px 
+        font-family: "opensansSM"
+        font-weight: 600 
+        transition: color .15s ease
+        &:hover 
+            color: $accent  
+        &:focus 
+            color: $accent  
+            text-decoration: none 
+.cart-popup__quantity 
+    line-height: 1 
+    color: #757575 
+    text-align: left
+
+.cart-popup__price
+    line-height: 1
+    text-align: left 
+    color: $black
+    font-family: "opensansSM"
+    font-weight: 600
+
+
+.table>tbody>tr>td, 
+.table>tbody>tr>th, 
+.table>tfoot>tr>td, 
+.table>tfoot>tr>th, 
+.table>thead>tr>td, 
+.table>thead>tr>th 
+    border: 0
+.cart-popup__total
+    display: flex 
+    justify-content: space-between 
+    padding-top: 15px 
+    margin-top: 10px
+    a 
+        display: inline-block 
+        border: 1px solid $black
+        padding: 5px 
+        text-align: center  
+        color: $black 
+        font-size: 11px 
+        letter-spacing: 2.2px 
+        text-transform: uppercase
+        background-color: transparent 
+        transition: background-color .2s ease, color .2s ease  
+        &:hover 
+            background-color: $black  
+            color: #fff 
+.cart-popup__total-wrapper
+    padding-top: 15px
+    border-top: 1px solid #e1e1e1
+.cart-popup__total-count 
+    border: 0 
+    tbody   
+        tr:not(:last-child) 
+            display: none 
+        tr   
+            padding-top: 10px
+            td 
+                font-family: "opensansSM"
+                font-weight: 600 
+                letter-spacing: .08em 
+                text-transform: uppercase       
+                color: $black
+                font-size: 16px 
+                padding: 8px 0
+            .text-right 
+               text-align: left
+            .text-left 
+                text-align: right
+
+
+
+
+
+// cart popup
+
+
+.cart__h1
+    margin: 30px 0 60px 0
+.cart__header
+    display: flex
+    margin: 0 -7px 25px
+    justify-content: space-between
+    
+.cart__item
+    display: flex
+    justify-content: space-between
+    margin: 0 -7px 25px
+.cart--image
+    flex: 0 0 180px
+.cart--name
+    flex: 0 1 180px
+.cart--options
+    flex: 0 1 180px
+.cart--price
+    flex: 0 1 180px
+.cart--quanity
+    flex: 0 1 180px
+.cart--total
+    flex: 0 1 180px
+.cart--remove
+    flex: 0 1 60px
+.cart-header__text
+    font-family: opensansSM
+    font-size: 14px
+    text-transform: uppercase
+    font-weight: 600
+    color: $black
+    letter-spacing: 1.4px
+    padding: 0 7px
+.cart-body__text
+    font-family: $default-font
+    font-size: 14px
+    text-transform: uppercase
+    color: $black
+    letter-spacing: 1.4px
+    padding: 0 7px
+    align-self: center
+    a
+        color: $black
+        transition: .2s linear color
+        &:hover
+            color: $accent    
+    .price__new 
+        color: #b40808 
+    .product-warning 
+        color: #b40808 
+        font-family: "opensansSM"
+.cart__image
+    img
+        border: none
+        padding: 0
+        width: 100%
+    
+.cart__item
+    border-bottom: 1px solid #c4c4c4
+    padding-bottom: 20px
+    margin-bottom: 35px
+.cart__quantity 
+    display: flex
+    align-self: center
+    height: 100%
+    .cart__btn
+        border: 1px solid #f3f3f3
+        background-color: transparent
+        height: 40px
+        line-height: 16px
+        padding: 10px 15px
+        font-size: 16px
+        color: $black
+        transition: .2s linear color
+        &:hover
+            color: #bf5c30
+        &--plus
+            border-left: none
+        &--minus
+            border-right: none
+    input 
+        width: auto
+        height: 40px
+        line-height: auto
+        border-radius: 0
+        border: 1px solid #f3f3f3
+        border-left: none
+        border-right: none
+        box-shadow: none
+        display: inline
+        font-size: 16px
+        text-align: center
+.cart__total-price
+    font-family: opensansSM
+    
+.cart__remove
+    button
+        background: none
+        border: none
+        box-shadow: none
+        i
+            color: $black
+            font-size: 10px
+            transition: .2s linear color
+        &:hover
+            background: none
+            border: none
+            box-shadow: none
+            i
+                color: #bf5c30 
+        &:focus,&:active 
+            background-color: transparent !important
+            border: 0 !important
+            color: #b40808 !important
+      
+        
+.cart__coupon-wrapper    
+    .input-group-coupon
+        display: flex    
+    .cart__coupon
+        max-width: 200px
+        width: 100%
+        height: 40px
+        border: 1px solid #c2af96
+        font-size: 14px
+        margin: 0
+        padding: 10px 20px
+        line-height: 18px
+        border-right: none
+    .cart__coupon-btn-submit
+        width: auto
+        #button-coupon
+            height: 40px
+            float: none
+            padding: 5px 40px
+            font-size: 14px
+
+.cart__bottom
+    display: flex  
+    justify-content: space-between
+    align-items: center
+    padding-right: 10%
+.cart__total-sum
+    display: flex
+    flex-direction: column
+    .cart__total-sum-item
+        display: flex
+        margin-bottom: 14px
+        .total-sum-item__text
+            display: block
+            text-transform: uppercase
+            font-size: 14px
+            color: #000
+            line-height: 1.3em
+            letter-spacing: 1.4px
+            font-family: opensansSM
+        .total-sum-item__title
+            width: 50%
+        .total-sum-item__value
+            width: 50%
+            padding-left: 15px
+            text-align: right
+        &:last-of-type   
+            margin-bottom: 0
+            .total-sum-item__value
+                font-family: opensansB
+
+.btn.btn-primary.cart__btn-checkout
+    float: none
+    font-size: 16px
+.cart__btn-checkout-wrapper
+    margin: 60px 0
+    text-align: center
+   

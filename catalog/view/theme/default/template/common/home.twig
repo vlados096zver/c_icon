@@ -1,0 +1,28 @@
+{{ header }}
+{{ content_full }}
+<div class="container-fluid"><div class="container">{{ content_full2 }}</div></div>
+<div id="common-home" class="container">
+  <div class="row">{{ column_left }}
+    {% if column_left and column_right %}
+    {% set class = 'col-sm-6' %}
+    {% elseif column_left or column_right %}
+    {% set class = 'col-sm-9' %}
+    {% else %}
+    {% set class = 'col-sm-12' %}
+    {% endif %}
+    <div id="content" class="{{ class }}">{{ content_top }}{{ content_bottom }}</div>
+    {{ column_right }}</div>
+</div>
+<div class="container">{{ content_full3 }}</div>
+{{ content_full4 }}
+<div class="container">{{ content_full5 }}</div>
+<div class="container-fluid"><div class="col-lg-6 col-md-6 col-sm-12">{{ content_full6 }}</div><div class="col-lg-6 col-md-6 col-sm-12">{{ content_full7 }}</div></div>
+<div class="container">{{ content_full8 }}</div>
+{{ content_full9 }}
+<div class="container">{{ content_full10 }}</div>
+<div class="container-fluid"><div class="col-lg-4 col-md-4 col-sm-12">{{ content_full11 }}</div><div class="col-lg-4 col-md-4 col-sm-12">{{ content_full12 }}</div><div class="col-lg-4 col-md-4 col-sm-12">{{ content_full13 }}</div></div>
+<div class="container">{{ content_full4 }}</div>
+{{ content_full5}}
+<div class="container">{{ content_full6 }}</div>
+{{ footer }}
+

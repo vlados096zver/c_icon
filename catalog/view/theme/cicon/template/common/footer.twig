@@ -1,0 +1,99 @@
+<footer class="footer">
+  <div class="container-fluid footer__container">
+
+    <div class="row footer__row">
+
+      <div class="col-sm-4 footer__logo">
+        <a href="/">
+          <img src="image/catalog/cicon-logo.png" alt="C.icon" class="footer__logo-img">
+        </a>
+      </div>
+
+      {# jd todo Перенести хардкод контактів в налаштування #}
+      <div class="col-sm-4 footer__info">
+        <h5 class="h5 title text-left">Контакти</h5>
+        <ul class="footer__list list">
+          <li class="list__item">ФОП Цимбала О.В.</li>
+          <li class="list__item"><a class="list__link" target="_blank" href="https://goo.gl/maps/aA3kyzNatUA4r3mj9" rel="noopener noreferrer">79008, Львівська обл., м.Львів, вул.Донцова, буд.2, кв.6</a></li>
+          <li class="list__item"> <span class="list__break">Адреса шоуруму</span> <a class="list__link" target="_blank" href="https://goo.gl/maps/Mr56WXE344B9pXmz5" rel="noopener noreferrer">м. Львів, вул. Чорновола, 16В</a></li>
+          <li class="list__item"> <a class="list__link" href="mailto:celebrityiconstore@gmail.com">celebrityiconstore@gmail.com</a> </li>
+          <li class="list__item"> <a class="list__link" href="tel:+380967700233">+380967700233</a> </li>
+          <li class="list__item"> <a class="list__link" href="tel:+380967700233">+380676494770</a> </li>
+        </ul>
+      </div>
+      {% if informations %}
+      <div class="col-sm-4">
+        <h5 class="h5 title text-left">{{ text_information }}</h5>
+        <ul class="list-unstyled footer__list list">
+         {% for information in informations %}
+          <li class="list__item" ><a class="list__link" href="{{ information.href }}">{{ information.title }}</a></li>
+          {% endfor %}
+          {# jd todo Перенести в Форма зворотнього зв'язку #}
+          <li class="list__item" ><a class="list__link" href="/index.php?route=information/contact">Напиши нам</a></li>
+        </ul>
+      </div>
+      {% endif %}
+
+{#
+      <!-- <div class="col-sm-4">
+        <h5>{{ text_service }}</h5>
+        <ul class="list-unstyled">
+          <li><a href="{{ contact }}">{{ text_contact }}</a></li>
+          <li><a href="{{ return }}">{{ text_return }}</a></li>
+          <li><a href="{{ sitemap }}">{{ text_sitemap }}</a></li>
+        </ul>
+      </div>
+
+      <div class="col-sm-4">
+        <h5>{{ text_extra }}</h5>
+        <ul class="list-unstyled">
+          <li><a href="{{ manufacturer }}">{{ text_manufacturer }}</a></li>
+          <li><a href="{{ voucher }}">{{ text_voucher }}</a></li>
+          <li><a href="{{ affiliate }}">{{ text_affiliate }}</a></li>
+          <li><a href="{{ special }}">{{ text_special }}</a></li>
+        </ul>
+      </div>
+
+
+      <div class="col-sm-3">
+        <h5>{{ text_account }}</h5>
+        <ul class="list-unstyled">
+          <li><a href="{{ account }}">{{ text_account }}</a></li>
+          <li><a href="{{ order }}">{{ text_order }}</a></li>
+          <li><a href="{{ wishlist }}">{{ text_wishlist }}</a></li>
+          <li><a href="{{ newsletter }}">{{ text_newsletter }}</a></li>
+        </ul>
+
+      </div> -->
+#}
+    </div>
+
+{#     <!-- <p>{{ powered }}</p> --> #}
+  </div>
+{# jd todo Блок копірайту старих розробників. Можна замінити на Soft-ko
+    <div class="footer__powered powered"> 
+      <p class="powered__title">DEVELOPED BY</p> 
+      <img class="powered__image" src="catalog/view/theme/cicon/image/powered.svg" alt="Fasion vs Marketing">
+    </div>
+#}
+
+    <div id="toTop">
+      <span>
+        <img src="catalog/view/theme/cicon/image/arrow-top.svg" alt="Вгору">
+      </span>
+    </div>
+
+</footer>
+
+
+
+{% for script in scripts %}
+<script src="{{ script }}"></script>
+{% endfor %}
+<script src="/catalog/view/theme/cicon/js/common.min.js"></script>
+
+{#
+OpenCart is open source software and you are free to remove the powered by OpenCart if you want, but its generally accepted practise to make a small donation.
+Please donate via PayPal to donate@opencart.com
+#}
+</body></html>

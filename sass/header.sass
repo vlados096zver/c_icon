@@ -1,0 +1,219 @@
+@import "vars"
+
+
+.thumbnails
+	overflow: auto
+	clear: both
+	list-style: none
+	padding: 0
+	margin: 0
+
+.thumbnails > li
+	margin-left: 20px
+
+.thumbnails
+	margin-left: -20px
+
+.thumbnails > img
+	width: 100%
+
+.image-additional a
+	margin-bottom: 20px
+	padding: 5px
+	display: block
+	border: 1px solid #ddd
+
+.image-additional 
+	max-width: 78px
+
+.thumbnails .image-additional
+	float: left
+	margin-left: 20px
+
+#information-information,
+#checkout-cart
+	padding-top: 88px
+	@media only screen and (max-width: 1538px) 
+		padding-top: 130px
+	@media only screen and (max-width: 990px) 
+		padding-top: 69px	
+
+.header 
+	padding: 23px 54px
+	line-height: 42px
+	position: fixed
+	top: 0px
+	left: 0px
+	width: 100%	
+	background-color: #fff
+	z-index: 55
+	border-bottom: 1px solid rgb(225, 225, 225)
+.header__content 
+	padding: 0
+.header__left-content 
+	display: flex
+	align-items: center
+.header__logo 
+	width: 168px
+	height: 32px
+.header__nav 
+	padding-left: 44px
+.nav__item-dropdown
+	position: relative 
+.nav__link.nav__link--button 
+	background-color: transparent 
+	border: 0
+	display: inline-block
+	padding: 0 
+	margin-right: 6px
+.nav__item 
+	display: inline-block
+	padding: 0 44px  
+	&:hover 
+		.navbar
+			visibility: visible 
+			z-index: 100 
+			opacity: 1
+	.navbar
+		background-image: none !important 
+		background-color: #fff !important 
+		box-shadow: 0 0 1px rgba(0,0,0,.6)
+		border: 0 !important 
+		border-radius: 0
+		min-width: 220px
+		z-index: -1
+		visibility: hidden 
+		opacity: 0 
+		transition: visibility .2s ease, opacity .2s ease
+		position: absolute 
+		.see-all 
+			display: none 	 
+		.navbar-header 
+			display: none
+		.navbar-collapse.navbar-ex1-collapse
+			padding: 0
+			.nav.navbar-nav 
+				display: flex 
+				flex-direction: column 
+				width: 100%
+				li  
+					width: 100%
+					position: relative
+					float: none
+					a 
+						text-shadow: none !important
+						color: $black !important 
+						letter-spacing: 1.3px
+						padding: 12px 15px !important 
+						border-bottom: 1px solid #e1e1e1 
+						transition: color .2s ease 
+						transition: background-color .2s ease
+				.dropdown
+					position: relative 
+					&::before  
+						content: '\f107 ' 
+						font-family: FontAwesome
+						position: absolute 
+						top: 3px 
+						right: 8px 
+					.dropdown-menu 
+						display: block 
+						left: 100% 
+						top: -1px
+						z-index: -1
+						visibility: hidden 
+						opacity: 0 
+						transition: visibility .2s ease, opacity .2s ease
+						padding-top: 0
+						border: 0
+						.dropdown-inner ul 
+							li a 	
+								&:hover 
+									background-color: rgba(0, 0, 0, 0.1)
+									background-image: none  
+					.see-all-subcat 
+						display: none
+					&:hover  
+						&::before 
+							color: $accent 
+						.dropdown-menu   
+							visibility: visible 
+							z-index: 100 
+							opacity: 1  
+#menu .see-all 
+	display: none
+							
+
+.nav__link 
+	color: $black
+	font-size: 
+	text-transform: uppercase 
+	font-size: 16px 
+	line-height: 24px 
+	display: inline-block
+	position: relative
+	&::after 
+		content: ''
+		display: block 
+		width: 100%
+		height: 1px 
+		background-color: $black
+		position: absolute
+		bottom: 0 
+		left: 0
+		transition: transform .3s cubic-bezier(.85,.26,.17,1)
+		transform: scaleX(0)
+		transform-origin: 100% 0
+	&:hover  
+		color: $black
+		&::after 
+			transform: scaleX(1)
+			transform-origin: 0 50%
+		i  
+			color: $accent
+	&:focus 
+		color: $black 
+		text-decoration: none 
+	i 
+		font-size: 16px 
+		margin-left: 5px
+		transition: color .2s ease
+.header__right-content 
+	text-align: right
+	position: inherit
+.header__wishlist.wishlist 
+	display: inline-block
+	position: relative
+	top: 2px
+.header__cart.cart 
+	display: inline-block
+	background-color: transparent 
+	border: 0
+	position: inherit
+	#cart
+		margin-bottom: 0
+		position: inherit
+		.btn.dropdown-toggle.cart__link.header__icon
+			background-color: transparent
+			border: 0 
+			box-shadow: none 
+			position: relative 
+			.cart__name 
+				display: none
+.header__icon 
+	padding: 0 4px 
+	margin: 0 12px
+.cart__total 
+	position: absolute
+	top: 2px 
+	right: -7px
+	margin-left: 3px 
+	font-size: 11px
+	color: $black
+.cart__name-wrapper 
+	color: $black
+
+
+.wishlist__link--active
+	svg path
+    	fill: #a52020

@@ -1,0 +1,116 @@
+{{ header }}
+<div id="checkout-cart" class="container">
+  <ul class="breadcrumb">
+    {% for breadcrumb in breadcrumbs %}
+    <li><a href="{{ breadcrumb.href }}">{{ breadcrumb.text }}</a></li>
+    {% endfor %}
+  </ul>
+  {% if attention %}
+  <div class="alert alert-info"><i class="fa fa-info-circle"></i> {{ attention }}
+    <button type="button" class="close" data-dismiss="alert">&times;</button>
+  </div>
+  {% endif %}
+  {% if success %}
+  <div class="alert alert-success alert-dismissible"><i class="fa fa-check-circle"></i> {{ success }}
+    <button type="button" class="close" data-dismiss="alert">&times;</button>
+  </div>
+  {% endif %}
+  {% if error_warning %}
+  <div class="alert alert-danger alert-dismissible"><i class="fa fa-exclamation-circle"></i> {{ error_warning }}
+    <button type="button" class="close" data-dismiss="alert">&times;</button>
+  </div>
+  {% endif %}
+  <div class="row">{{ column_left }}
+    {% if column_left and column_right %}
+    {% set class = 'col-sm-6' %}
+    {% elseif column_left or column_right %}
+    {% set class = 'col-sm-9' %}
+    {% else %}
+    {% set class = 'col-sm-12' %}
+    {% endif %}
+    <div id="content" class="{{ class }}">{{ content_top }}
+      <h1 class="cart__h1 text-align--center">{{ heading_title }} </h1>
+      <form action="{{ action }}" method="post" enctype="multipart/form-data">
+          <div class="cart__table">
+            <div class="cart__header">
+                <div class="text-center cart--image"><!-- {{ column_image }} --></div>
+                <div class="text-left cart--name cart-header__text">{{ column_name }}</div>
+                <div class="text-left cart--options cart-header__text">Варіант</div>
+                <div class="text-left cart--price cart-header__text">{{ column_price }}</div>
+                <div class="text-left cart--quanity cart-header__text">{{ column_quantity }}</div>
+                <div class="text-left cart--total  cart-header__text">{{ column_total }}</div>
+                <div class="text-left cart--remove cart-header__text"></div>
+            </div>
+
+            <div class="cart__body">         
+              {% for product in products %}
+                <div class="cart__item">
+                  <div class="text-center cart__image  cart--image">
+                    {% if product.thumb %} 
+                      <a href="{{ product.href }}"><img src="{{ product.thumb }}" alt="{{ product.name }}" title="{{ product.name }}" class="img-thumbnail" />
+                      </a> 
+                    {% endif %}
+                  </div>
+
+                  <div class="text-left cart__name cart-body__text  cart--name">
+                    <a href="{{ product.href }}">{{ product.name }}</a> 
+                    {% if not product.stock %} 
+                      <span class="text-danger">***</span> 
+                    {% endif %}
+                  </div>
+         
+                  <div class="text-left cart__option cart-body__text  cart--options"> 
+                    {% if product.option %}
+                    {% for option in product.option %}
+                      {{ option.value }}
+                    <!-- <small>{{ option.name }}: </small>  -->
+                    {% endfor %}
+                    {% endif %}
+                  </div>
+
+                  <div class="text-left cart__price cart-body__text  cart--price">{{ product.price }}</div>
+
+                  <div class="text-left cart__quantity cart-body__text  cart--quanity"> 
+                    <button class="cart__btn cart__btn--minus" onClick="document.getElementById('{{ product.cart_id }}').value=parseInt(document.getElementById('{{ product.cart_id }}').value)-1">-</button>
+                    <input  type="text" name="quantity[{{ product.cart_id }}]" value="{{ product.quantity }}" size="1" class="form-control" id="{{ product.cart_id }}"/>
+                    <button class="cart__btn cart__btn--plus" onClick="document.getElementById('{{ product.cart_id }}').value=parseInt(document.getElementById('{{ product.cart_id }}').value)+1">+</button> 
+                  </div>
+
+             
+                  <div class="text-left cart__total-price cart-body__text  cart--total">{{ product.total }}</div>
+                  <div class="text-left cart-body__text cart__remove  cart--remove">
+                    <button type="button" data-toggle="tooltip" title="{{ button_remove }}" class="btn btn-danger" onclick="cart.remove('{{ product.cart_id }}');"><i class="fa fa-times"></i></button>
+                  </div>
+                </div>
+              {% endfor %}
+            </div>
+          </div>
+        </form>
+    <div class="cart__bottom">
+        {% if modules %}
+          <div class="cart__coupon-wrapper"> 
+            {% for module in modules %}
+            {{ module }}
+            {% endfor %} 
+          </div>
+        {% endif %} 
+        <div class="cart__total-sum">
+            {% for total in totals %}
+             <div class="cart__total-sum-item">
+                <span class="total-sum-item__text total-sum-item__title">{{ total.title }}:</span>
+                <span class="total-sum-item__text total-sum-item__value">{{ total.text }}</span>
+             </div>
+            {% endfor %}
+        </div>
+    </div>
+         
+    
+        <!-- <div class="pull-left"><a href="{{ continue }}" class="btn btn-default">{{ button_shopping }}</a></div> -->
+    <div class="cart__btn-checkout-wrapper">
+      <a href="{{ checkout }}" class="btn btn-primary cart__btn-checkout">{{ button_checkout }}</a></div>
+      
+      {{ content_bottom }}</div>
+    {{ column_right }}</div>
+</div>
+{{ footer }} 
+

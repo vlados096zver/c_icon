@@ -1,0 +1,105 @@
+.faq h1 {
+	margin-top: 60px;
+	margin-bottom: 50px;
+}
+
+.panel-group-h2 {
+	margin-bottom: 20px;
+}
+
+.panel-group {
+	margin-bottom: 60px;
+}
+
+.panel-group .panel {
+	border-radius: 0;
+	border: none;
+	border-bottom: 1px solid #e1e1e1;
+	transition: border-bottom .2s linear;
+}
+
+.panel-group .panel > .panel-heading {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	position: relative;
+	padding: 18px 30px 14px 0;
+	background-color: #fff;
+	border: none;
+	cursor: pointer;
+	font-family: "opensansB", sans-serif;
+	font-weight: 900;
+	font-size: 14px;
+	letter-spacing: 0.98px;
+	color: #000;
+	text-transform: uppercase;
+}
+
+.panel-group .panel > .panel-heading + .panel-collapse > .panel-body {
+	border: none;
+	padding-left: 0;
+}
+
+.panel-group .panel .panel-icon {
+	display: block;
+	position: absolute;
+	top: 50%;
+	right: 5px;
+	transform: translateY(-50%);
+	width: 11px;
+	height: 1px;
+	background-color: #bf5c30;
+}
+
+.panel-group .panel .panel-icon::before {
+	content: "";
+	display: block;
+	position: absolute;
+	background-color: #bf5c30;
+	width: 1px;
+	height: 11px;
+	top: -5px;
+	left: 5px;
+	transition: all .2s ease-out;
+	opacity: 0;
+}
+
+.panel-group .panel .panel-icon::before {
+	opacity: 1;
+}
+
+.panel-group .panel:hover .panel-icon::before {
+	opacity: 0;
+}
+
+.panel-group .panel-open {
+	border-bottom: 1px solid #bf5c30;
+}
+
+.panel-group .panel-open .panel-icon::before {
+	opacity: 0;
+}
+
+.panel-body {
+	padding: 0;
+	padding-bottom: 30px;
+}
+
+.panel-body .panel-text {
+	margin-bottom: 0;
+	font-family: "opensans", sans-serif;
+	font-size: 14px;
+	font-weight: 400;
+	letter-spacing: 1.4px;
+}
+
+.panel-img-wrapper {
+	max-width: 150px;
+	min-height: 50px;
+}
+
+.panel-img-wrapper .panel-img {
+	object-fit: cover;
+	width: 100%;
+}
+

@@ -1,0 +1,245 @@
+.product__row {
+	padding: 100px 0 150px 0;
+}
+
+.product__row .thumbnails li .thumbnail {
+	border: 0;
+	padding: 0;
+	margin-bottom: 10px;
+}
+
+.product__row .thumbnails .image-additional {
+	padding: 10px;
+	margin-left: 0;
+	max-width: 100%;
+	margin-right: 10px;
+}
+
+.product__row .product__picture {
+	padding-right: 60px;
+}
+
+.product__row .product__picture .nav.nav-tabs,
+.product__row .product__picture .tab-content {
+	display: none;
+}
+
+.product__info-wrapper {
+	position: relative;
+}
+
+.product__info-wrapper .button.button-wishlist.button-wishlist--product {
+	position: absolute;
+	right: 0;
+	top: 3px;
+}
+
+.product__info-wrapper h1 {
+	margin-top: 0;
+	font-family: "opensansSM";
+	font-weight: 600;
+	letter-spacing: 0.96px;
+	color: #000;
+	font-size: 32px;
+}
+
+.product__info-wrapper .product__price-wrapper {
+	margin-bottom: 25px;
+}
+
+.product__info-wrapper .product__price-wrapper .price,
+.product__info-wrapper .product__price-wrapper .price__new {
+	font-weight: 500;
+	font-size: 24px;
+	letter-spacing: 1.4px;
+	line-height: 25px;
+	color: #000;
+	margin-right: 15px;
+}
+
+.product__info-wrapper .product__price-wrapper .price__old {
+	text-decoration: line-through;
+	font-size: 20px;
+	color: #000;
+}
+
+.product__info-wrapper .product__price-wrapper .price__new {
+	color: #b40808;
+}
+
+.product__info-wrapper .product__price-wrapper .price__tax,
+.product__info-wrapper .product__price-wrapper .price__points,
+.product__info-wrapper .product__price-wrapper .price__discount {
+	display: none;
+}
+
+.product__info-wrapper .info {
+	margin-bottom: 33px;
+}
+
+.product__info-wrapper .info .info__item {
+	margin-bottom: 20px;
+}
+
+.product__info-wrapper .info .info__title {
+	font-size: 14px;
+	color: #000;
+	line-height: 26px;
+	font-weight: 500;
+	display: block;
+	text-transform: uppercase;
+}
+
+.product__info-wrapper .info .info__text {
+	color: #a7a7a7;
+	letter-spacing: 1.4px;
+	line-height: 25px;
+}
+
+.product__info-wrapper .info .info__text-special {
+	text-transform: uppercase;
+}
+
+.product__info-wrapper .rating {
+	display: none;
+}
+
+.product__description {
+	margin-bottom: 25px;
+	padding-top: 25px;
+}
+
+.product__description p {
+	color: #000;
+	line-height: 1.4;
+	letter-spacing: 1.4px;
+}
+
+.product__option .option__size-table {
+	text-align: right;
+	margin-bottom: 14px;
+}
+
+.product__option .option__size-table .button__size {
+	background-color: transparent;
+	border: 0;
+	color: #000;
+	text-decoration: underline;
+}
+
+.product__option .option {
+	margin-bottom: 15px;
+}
+
+.product__option .option .option__label--select {
+	display: none;
+}
+
+.product__option .option .option__select {
+	border-radius: 0;
+	border: 1px solid #a7a7a7;
+	padding: 7px 10px;
+	min-height: 40px;
+	box-shadow: none;
+	letter-spacing: 1.4px;
+	line-height: 24px;
+	color: #757575;
+}
+
+.product__btn .product__btn-title {
+	display: none;
+}
+
+.product__btn .product__btn-quantity {
+	margin-right: 40px;
+	padding: 4px;
+	border-radius: 0;
+	border: 1px solid #c2af96;
+	color: #000;
+	text-align: center;
+	min-width: 50px;
+	display: none;
+}
+
+.product__btn .btn.btn-primary.btn-lg.btn-block.product__btn-cart {
+	background-color: #c2af96;
+	background-image: none;
+	border: 0;
+	border-radius: 0;
+	box-shadow: none;
+	text-shadow: none;
+	color: #fff;
+	letter-spacing: 2.2px;
+	font-size: 11px;
+	text-transform: uppercase;
+	transition: background-color .2s ease;
+	width: 100%;
+}
+
+.product__btn .btn.btn-primary.btn-lg.btn-block.product__btn-cart:hover {
+	background-color: #cbbba6;
+}
+
+.product__btn .btn.btn-primary.btn-lg.btn-block.product__btn-cart:focus {
+	background-color: #b9a386;
+	transform: translateY(1px);
+}
+
+.h1--product {
+	margin-bottom: 20px;
+}
+
+.size__popup.active {
+	opacity: 1;
+	visibility: visible;
+	z-index: 100;
+}
+
+.size__popup {
+	position: fixed;
+	top: 0;
+	right: 0;
+	left: 0;
+	bottom: 0;
+	background-color: rgba(120, 120, 120, 0.7);
+	z-index: -1;
+	opacity: 0;
+	visibility: hidden;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: visibility .2s ease, opacity .2s ease;
+	will-change: opacity;
+}
+
+.size__popup-inner {
+	background-color: #fff;
+	padding: 44px;
+	width: 80%;
+	position: relative;
+}
+
+.size__popup-title {
+	color: #000;
+	text-align: center;
+	font-size: 24px;
+	line-height: 36px;
+}
+
+.size__popup-close {
+	background-color: transparent;
+	border: 0;
+	font-size: 30px;
+	line-height: 36px;
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 55px;
+	height: 50px;
+	color: #000;
+}
+
+.size__popup-img {
+	width: 100%;
+}
+

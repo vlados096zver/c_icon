@@ -1,0 +1,120 @@
+@import "vars"
+
+.category-wrapper
+    padding-top: 100px
+.category__results
+    color: #a7a7a7
+    font-family: $default-font
+    font-size: 14px
+    line-height: 19px
+    font-style: normal
+    font-weight: 400
+    letter-spacing: 0.1em
+    line-height: 47px
+.category__sort
+    .form-control
+        float: right
+        max-width: 200px
+        background-image: url('../image/icon-arrow-down.png')
+        background-repeat: no-repeat
+        background-position: 95% 45%
+        background-size: 20px
+        height: auto
+        border-image: none
+        border: 1px solid #fff
+        box-shadow: none
+        border-radius: 0
+        font-size: 14px
+        font-weight: 400
+        color: #000
+        letter-spacing: 0.1em
+        padding: 11px 11px 13px
+        appearance: none
+.category-sidebar
+    display: flex
+    flex-direction: column
+
+    .list-group-item
+        display: inline-block
+        width: max-content
+        border: none
+        border-radius: 0
+        background-color: transparent
+        font-weight: normal
+        color: #534F4F
+        font-family: "opensans", sans-serif
+        text-shadow: none
+        text-transform: uppercase
+        font-size: 14px
+        letter-spacing: 0.1em
+        line-height: 1.2
+        margin-bottom: 15px
+        padding: 0
+        // margin-bottom: 30px
+        transition: .2s ease color
+        &:after
+            position: absolute
+            content: ' '
+            bottom: 1px
+            left: 0px
+            width: 0px
+            height: 1px
+            background-color: #534F4F
+            transition: 0.3s width
+
+        &.active
+            position: relative
+            background-color: transparent
+            border: none
+            color: #E75A5A
+
+            &:hover
+                color: #E75A5A
+                background-color: transparent
+
+        &:hover
+            background-color: transparent
+
+        &:hover:not(.active)
+            &:after
+                width: 100%
+         
+
+        &.category-sidebar__title
+            font-family: opensansSM
+            font-weight: 600
+            &:hover
+                color: $black
+            &:hover:after
+                width: 0px
+
+.pagination
+    li 
+        a,span
+            border: none
+            border-radius: 0
+            color: $black
+            transition: .2s linear color
+            font-size: 16px
+            font-family: opensansM
+            margin-right: 18px
+            svg path 
+                transition: .2s linear stroke
+            &:hover,&:focus
+                color: $accent
+                background-color: transparent
+                svg path
+                    stroke: $accent
+        &:last-child>a, 
+        &:last-child>span    
+            margin-right: 0
+    .active span
+        font-size: 16px
+        font-family: opensansM
+        background-color: transparent
+        color: $accent
+        border: none
+        &:hover,&:focus
+            color: $accent
+            background-color: transparent
+      

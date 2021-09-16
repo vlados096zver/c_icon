@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<!--[if IE 8 ]><html dir="ltr" lang="ua" class="ie8"><![endif]-->
+<!--[if IE 9 ]><html dir="ltr" lang="ua" class="ie9"><![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!-->
+<html dir="ltr" lang="ua">
+<!--<![endif]-->
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Допомога</title>
+  <!--<base href="https://cicon2.dev.soft-ko.com/" />-->
+      <script src="catalog/view/javascript/jquery/jquery-2.1.1.min.js" type="text/javascript"></script>
+  <link href="catalog/view/javascript/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen" />
+  <script src="catalog/view/javascript/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+  <link href="catalog/view/javascript/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+  <link href="//fonts.googleapis.com/css?family=Open+Sans:400,400i,300,700" rel="stylesheet" type="text/css" />
+   <!--<link href="catalog/view/theme/default/stylesheet/stylesheet.css" rel="stylesheet">
+ <link href="catalog/view/theme/cicon/css/style.min.css" rel="stylesheet">-->
+ <link href="catalog/view/javascript/jquery/swiper/css/swiper.min.css" type="text/css" rel="stylesheet" media="screen" />
+  <link href="css/stylesheet.css" rel="stylesheet">
+   <script src="catalog/view/javascript/jquery/swiper/js/swiper.jquery.js" type="text/javascript"></script>
+      <script src="catalog/view/javascript/common.js" type="text/javascript"></script>
+      <link href="https://cicon2.dev.soft-ko.com/image/catalog/cicon-favicon.png" rel="icon" />
+    </head>
+<body> 
+
+    
+<header class="header">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-xs-2 hidden-lg hidden-md mobile__menu "><img src="catalog/view/theme/cicon/image/menu.svg" alt="меню"></div>
+        <div class="header__left-content header__content col-md-10 col-xs-8">
+          <div class="header__logo" id="logo">
+                      <a href="http://cicon2.dev.soft-ko.com/index.php?route=common/home"><img src="https://cicon2.dev.soft-ko.com/image/catalog/cicon-logo.png" title="Сicon" alt="Сicon" class="img-responsive" /></a>
+                    </div>
+
+                    <div class="header__nav nav">
+            <ul class="nav__items">
+                            <li class="nav__item"><a href="/" class="nav__link">Головна</a></li>
+              <li class="nav__item"><a href="/index.php?route=information/information&information_id=4" class="nav__link">Про нас</a></li>
+              <li class="nav__item nav__item-dropdown">
+                <button class="nav__link nav__link--button">Купити онлайн</button>
+                <i class="fa fa-angle-down i-open"></i>
+                  <nav id="menu" class="navbar">
+    <div class="navbar-header"><span id="category" class="visible-xs">Категорії</span>
+      <button type="button" class="btn btn-navbar navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse"><i class="fa fa-bars"></i></button>
+    </div>
+    <div class="navbar-collapse navbar-ex1-collapse">
+      <ul class="nav navbar-nav">
+                        <li><a href="http://cicon2.dev.soft-ko.com/vzutta/">Взуття</a></li>
+                                <li><a href="http://cicon2.dev.soft-ko.com/kostum/">костюм</a></li>
+                                <li><a href="http://cicon2.dev.soft-ko.com/pidzaki/">піджаки</a></li>
+                                <li><a href="http://cicon2.dev.soft-ko.com/pizami/">піжами</a></li>
+                                <li><a href="http://cicon2.dev.soft-ko.com/palto/">пальто</a></li>
+                                <li><a href="http://cicon2.dev.soft-ko.com/svetri/">Светри</a></li>
+                                <li><a href="http://cicon2.dev.soft-ko.com/sorocki/">Сорочки</a></li>
+                                <li><a href="http://cicon2.dev.soft-ko.com/spidnici/">спідниці</a></li>
+                                <li><a href="http://cicon2.dev.soft-ko.com/sukni/">сукні</a></li>
+                                <li><a href="http://cicon2.dev.soft-ko.com/topi/">Топи</a></li>
+                                <li><a href="http://cicon2.dev.soft-ko.com/trenci/">тренчі</a></li>
+                                <li><a href="http://cicon2.dev.soft-ko.com/futbolki/">Футболки</a></li>
+                                <li><a href="http://cicon2.dev.soft-ko.com/sorti/">шорти</a></li>
+                                <li><a href="http://cicon2.dev.soft-ko.com/stani/">штани</a></li>
+                      </ul>
+    </div>
+  </nav>
+ 
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="header__right-content header__content col-md-2 col-xs-2">
+          <div class="header__wishlist wishlist">
+            <a class="wishlist__link header__icon" href="https://cicon2.dev.soft-ko.com/index.php?route=account/wishlist" id="wishlist-total" title="Закладки (0)">
+              <svg width="18" height="18" viewBox="0 0 30 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M14.7077 27.4057L15 27.6163L17.7132 24.9278L18.0264 25.3176C18.0265 25.3175 18.0266 25.3174 18.0267 25.3173C18.9831 24.5487 20.1884 23.4691 21.6398 22.0835L21.6399 22.0835L21.6432 22.0802C23.1042 20.6591 24.3685 19.2603 25.4342 17.8835C26.5095 16.4942 27.4512 14.9095 28.2612 13.1322L28.2623 13.1296C29.0808 11.3068 29.5 9.55564 29.5 7.8812C29.5 5.62107 28.8548 3.79745 27.506 2.48146C26.1588 1.14076 24.3003 0.5 22 0.5C20.2416 0.5 18.6592 0.970024 17.2691 1.91595L17.2691 1.91592L17.2637 1.91969C16.2742 2.61227 15.5168 3.46672 14.998 4.47887C14.4711 3.46455 13.6953 2.60974 12.6794 1.91781C11.3233 0.969453 9.75721 0.5 8 0.5C5.69975 0.5 3.84122 1.14076 2.49402 2.48144C1.14519 3.79743 0.5 5.62106 0.5 7.8812C0.5 9.55564 0.919159 11.3068 1.73767 13.1296L1.73766 13.1296L1.73882 13.1322C2.5488 14.9095 3.49053 16.4942 4.56585 17.8835C5.63154 19.2603 6.89584 20.6591 8.3568 22.0802L8.36016 22.0835C9.8105 23.4681 10.9953 24.5453 11.9119 25.3115L11.9189 25.3173L11.926 25.3228C12.871 26.0561 13.7982 26.7504 14.7077 27.4057Z" stroke="#A52020"></path>
+              </svg>
+            </a>
+          </div>
+          <div class="header__cart cart">
+            <div id="cart" class="btn-group btn-block">
+
+  <button type="button" data-toggle="dropdown" data-loading-text="Завантаження..." class="btn dropdown-toggle cart__link header__icon"> <img src="catalog/view/theme/cicon/image/cart.svg" alt="Корзина"> <span class="cart__name-wrapper"> 0 товар(ів) - 0.00<span class="price__symbol">UAH</span></span>  </button>
+
+  <!-- Заменить -->
+  
+  <!-- <span class="cart__name">Товари</span> <span class="cart__total">1</span> -->
+  <!-- Заменить -->
+  
+  <div class="cart-popup__wrapper">
+  <ul class="dropdown-menu pull-right ">
+
+        <li>
+      <p class="text-center cart-popup__empty">Ваш кошик порожній!</p>
+    </li>
+         
+  </ul>
+</div>
+</div>
+
+
+
+<script>
+  $(document).ready(function(){
+
+    const mediaQuery = window.matchMedia('(max-width: 992px)');
+
+    if(mediaQuery.matches) {
+      $("#cart").on('click',function(e){
+        e.preventDefault; 
+        location = "/index.php?route=checkout/cart"
+      })
+    };
+
+  })
+</script>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+<div class="newsletter-popup newsletter">
+  <div class="newsletter__wrapper">
+    <button class="newsletter-popup__close"><img src="catalog/view/theme/cicon/image/close.svg" alt="X"></button>
+    <div class="newsletter__image-wrapper">
+      <img src="catalog/view/theme/cicon/image/popup-image.jpg" alt="Newsletter" class="newsletter__image">
+    </div>
+    <div class="newsletter__info">
+      <p class="newsletter__title">ПІДПИШІТЬСЯ НА РОЗСИЛКУ</p>
+      <p class="newsletter__subtitle">Підпишись та отримай 10% знижку на першу покупку</p>
+       <form class="newsletter__form-wrapper form">
+          <input type="email" placeholder="Введіть e-mail" name="Подписаться на розсилку" class="form__input input">
+          <button type="submit" class="form__button">НАДІСЛАТИ</button>
+       </form>
+    </div>
+  </div>
+</div>
+
+<div id="product-category" class="container">
+  <ul class="breadcrumb">
+        <li><a href="http://cicon2.dev.soft-ko.com/index.php?route=common/home"><i class="fa fa-home"></i></a></li>
+        <li><a href="http://cicon2.dev.soft-ko.com/kostum/">костюм</a></li>
+      </ul>
+  <div class="row category-wrapper"><aside id="column-left" class="col-md-3 hidden-sm">
+    
+  <div class="list-group category-sidebar">
+    <a class="list-group-item category-sidebar__title">Категорії</a> 
+         <a href="http://cicon2.dev.soft-ko.com/vzutta/" class="list-group-item">view all</a>
+             
+    <a href="http://cicon2.dev.soft-ko.com/kostum/" class="list-group-item active">пальта</a> 
+                 <a href="http://cicon2.dev.soft-ko.com/pidzaki/" class="list-group-item">куртки</a>
+             <a href="http://cicon2.dev.soft-ko.com/pizami/" class="list-group-item">піджаки</a>
+             <a href="http://cicon2.dev.soft-ko.com/palto/" class="list-group-item">тренчі</a>
+             <a href="http://cicon2.dev.soft-ko.com/svetri/" class="list-group-item">travel dress</a>
+             <a href="http://cicon2.dev.soft-ko.com/sorocki/" class="list-group-item">slip dress</a>
+             <a href="http://cicon2.dev.soft-ko.com/spidnici/" class="list-group-item">брюки</a>
+             <a href="http://cicon2.dev.soft-ko.com/sukni/" class="list-group-item">сорочки</a>
+             <a href="http://cicon2.dev.soft-ko.com/topi/" class="list-group-item">Топи</a>
+             <a href="http://cicon2.dev.soft-ko.com/trenci/" class="list-group-item">спідниці</a>
+             <a href="http://cicon2.dev.soft-ko.com/futbolki/" class="list-group-item">топи</a>
+             <a href="http://cicon2.dev.soft-ko.com/stani/" class="list-group-item">sale</a>
+          </div>
+
+  </aside>
+
+                <div id="content" class="col-sm-12 col-md-9">
+      
+            <div class="row">
+        <div class="col-sm-7 category__results">Показано 1 - 15 із 20 результатів</div>
+        <div class="col-sm-5 text-right category__sort">
+                        <select id="input-sort" class="form-control" onchange="location = this.value;">
+                             
+              <option value="http://cicon2.dev.soft-ko.com/kostum/?sort=p.sort_order&amp;order=ASC" selected="selected">За замовчуванням</option>           
+                                                        <option value="http://cicon2.dev.soft-ko.com/kostum/?sort=pd.name&amp;order=ASC">Назва (А - Я)</option>
+                                                        <option value="http://cicon2.dev.soft-ko.com/kostum/?sort=pd.name&amp;order=DESC">Назва (Я - А)</option>
+                                                        <option value="http://cicon2.dev.soft-ko.com/kostum/?sort=p.price&amp;order=ASC">Ціна (низька &gt; висока)</option>
+                                                        <option value="http://cicon2.dev.soft-ko.com/kostum/?sort=p.price&amp;order=DESC">Ціна (висока &gt; низька)</option>
+                                                        <option value="http://cicon2.dev.soft-ko.com/kostum/?sort=rating&amp;order=DESC">Рейтинг (починаючи з високого)</option>
+                                                        <option value="http://cicon2.dev.soft-ko.com/kostum/?sort=rating&amp;order=ASC">Рейтинг (починаючи з низького)</option>
+                                                        <option value="http://cicon2.dev.soft-ko.com/kostum/?sort=p.model&amp;order=ASC">Модель (А - Я)</option>
+                                                        <option value="http://cicon2.dev.soft-ko.com/kostum/?sort=p.model&amp;order=DESC">Модель (Я - А)</option>
+                                      </select>      
+        </div>  
+      </div>
+      <div class="row  product-row">
+                  <div class="product-layout col-md-4 col-xs-6">
+            <div class="product-thumb ">
+               <div class="swiper-gallery">
+                <div class="swiper-wrapper">
+                  <div class="image swiper-slide">
+                        <a href="http://cicon2.dev.soft-ko.com/kostum-golubij"><img src="https://cicon2.dev.soft-ko.com/image/cache/catalog/product/000000479_1-300x300.jpg" alt="Cotton suit" title="Cotton suit" class="img-responsive" /></a>
+                  </div>
+                    <div class="image swiper-slide">
+                        <a href="http://cicon2.dev.soft-ko.com/kostum-golubij"><img src="https://cicon2.dev.soft-ko.com/image/cache/catalog/product/000000497_1-300x300.jpg" alt="Cotton suit" title="Cotton suit" class="img-responsive" /></a>
+                  </div>
+                </div>
+                 <div class="swiper-button-prev"></div>
+                  <div class="swiper-button-next"></div>
+              </div>
+              <div class="caption">
+                <h4><a href="http://cicon2.dev.soft-ko.com/kostum-golubij">Cotton suit</a></h4>
+                <p class="category"> <a href="http://cicon2.dev.soft-ko.com/kostum">костюм</a> </p>
+                <p class="description">..</p>
+                                                <p class="price">
+                                    4500.00<span class="price__symbol">UAH</span>
+                                                      <span class="price-tax">Без ПДВ: 4500.00<span class="price__symbol">UAH</span></span>
+                                  </p>
+                        
+                <button type="button" class="button button-wishlist" data-toggle="tooltip" title="В закладки" onclick="wishlist.add('103');">
+                   <svg width="18" height="18" viewBox="0 0 30 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M14.7077 27.4057L15 27.6163L17.7132 24.9278L18.0264 25.3176C18.0265 25.3175 18.0266 25.3174 18.0267 25.3173C18.9831 24.5487 20.1884 23.4691 21.6398 22.0835L21.6399 22.0835L21.6432 22.0802C23.1042 20.6591 24.3685 19.2603 25.4342 17.8835C26.5095 16.4942 27.4512 14.9095 28.2612 13.1322L28.2623 13.1296C29.0808 11.3068 29.5 9.55564 29.5 7.8812C29.5 5.62107 28.8548 3.79745 27.506 2.48146C26.1588 1.14076 24.3003 0.5 22 0.5C20.2416 0.5 18.6592 0.970024 17.2691 1.91595L17.2691 1.91592L17.2637 1.91969C16.2742 2.61227 15.5168 3.46672 14.998 4.47887C14.4711 3.46455 13.6953 2.60974 12.6794 1.91781C11.3233 0.969453 9.75721 0.5 8 0.5C5.69975 0.5 3.84122 1.14076 2.49402 2.48144C1.14519 3.79743 0.5 5.62106 0.5 7.8812C0.5 9.55564 0.919159 11.3068 1.73767 13.1296L1.73766 13.1296L1.73882 13.1322C2.5488 14.9095 3.49053 16.4942 4.56585 17.8835C5.63154 19.2603 6.89584 20.6591 8.3568 22.0802L8.36016 22.0835C9.8105 23.4681 10.9953 24.5453 11.9119 25.3115L11.9189 25.3173L11.926 25.3228C12.871 26.0561 13.7982 26.7504 14.7077 27.4057Z" stroke="#A52020"></path>
+                  </svg>
+                </button>
+        
+              </div>
+              <div class="button-group">
+                <button type="button" onclick="cart.add('103');"><i class="fa fa-shopping-cart"></i> <span class="hidden-xs hidden-sm hidden-md">Купити</span></button>
+                <button type="button" data-toggle="tooltip" title="порівняння" onclick="compare.add('103');"><i class="fa fa-exchange"></i></button>
+              </div>
+            </div>
+          </div>
+                  <div class="product-layout col-md-4 col-xs-6">
+            <div class="product-thumb ">
+              <div class="swiper-gallery">
+                <div class="swiper-wrapper">
+                  <div class="image swiper-slide">
+                      <a href="http://cicon2.dev.soft-ko.com/kostum-koton-bilij-stani"><img src="https://cicon2.dev.soft-ko.com/image/cache/catalog/product/000000497_1-300x300.jpg" alt="Cotton suit" title="Cotton suit" class="img-responsive" /></a>
+                  </div>
+                  <div class="image swiper-slide">
+                      <a href="http://cicon2.dev.soft-ko.com/kostum-koton-bilij-stani"><img src="https://cicon2.dev.soft-ko.com/image/cache/catalog/product/000000497_1-300x300.jpg" alt="Cotton suit" title="Cotton suit" class="img-responsive" /></a>
+                  </div>
+                </div>
+                 <div class="swiper-button-prev"></div>
+                  <div class="swiper-button-next"></div>
+              </div>
+              <div class="caption">
+                <h4><a href="http://cicon2.dev.soft-ko.com/kostum-koton-bilij-stani">Cotton suit</a></h4>
+                <p class="category"> <a href="http://cicon2.dev.soft-ko.com/kostum">костюм</a> </p>
+                <p class="description">..</p>
+                                                <p class="price">
+                                    4500.00<span class="price__symbol">UAH</span>
+                                                      <span class="price-tax">Без ПДВ: 4500.00<span class="price__symbol">UAH</span></span>
+                                  </p>
+                        
+                <button type="button" class="button button-wishlist" data-toggle="tooltip" title="В закладки" onclick="wishlist.add('117');">
+                   <svg width="18" height="18" viewBox="0 0 30 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M14.7077 27.4057L15 27.6163L17.7132 24.9278L18.0264 25.3176C18.0265 25.3175 18.0266 25.3174 18.0267 25.3173C18.9831 24.5487 20.1884 23.4691 21.6398 22.0835L21.6399 22.0835L21.6432 22.0802C23.1042 20.6591 24.3685 19.2603 25.4342 17.8835C26.5095 16.4942 27.4512 14.9095 28.2612 13.1322L28.2623 13.1296C29.0808 11.3068 29.5 9.55564 29.5 7.8812C29.5 5.62107 28.8548 3.79745 27.506 2.48146C26.1588 1.14076 24.3003 0.5 22 0.5C20.2416 0.5 18.6592 0.970024 17.2691 1.91595L17.2691 1.91592L17.2637 1.91969C16.2742 2.61227 15.5168 3.46672 14.998 4.47887C14.4711 3.46455 13.6953 2.60974 12.6794 1.91781C11.3233 0.969453 9.75721 0.5 8 0.5C5.69975 0.5 3.84122 1.14076 2.49402 2.48144C1.14519 3.79743 0.5 5.62106 0.5 7.8812C0.5 9.55564 0.919159 11.3068 1.73767 13.1296L1.73766 13.1296L1.73882 13.1322C2.5488 14.9095 3.49053 16.4942 4.56585 17.8835C5.63154 19.2603 6.89584 20.6591 8.3568 22.0802L8.36016 22.0835C9.8105 23.4681 10.9953 24.5453 11.9119 25.3115L11.9189 25.3173L11.926 25.3228C12.871 26.0561 13.7982 26.7504 14.7077 27.4057Z" stroke="#A52020"></path>
+                  </svg>
+                </button>
+        
+              </div>
+              <div class="button-group">
+                <button type="button" onclick="cart.add('117');"><i class="fa fa-shopping-cart"></i> <span class="hidden-xs hidden-sm hidden-md">Купити</span></button>
+                <button type="button" data-toggle="tooltip" title="порівняння" onclick="compare.add('117');"><i class="fa fa-exchange"></i></button>
+              </div>
+            </div>
+          </div>
+                  <div class="product-layout col-md-4 col-xs-6">
+            <div class="product-thumb ">
+              <div class="image">
+                                <a href="http://cicon2.dev.soft-ko.com/kostum-maposatnij"><img src="https://cicon2.dev.soft-ko.com/image/cache/catalog/product/000000480_1-300x300.jpg" alt="Cotton suit" title="Cotton suit" class="img-responsive" /></a>
+              </div>
+              <div class="caption">
+                <h4><a href="http://cicon2.dev.soft-ko.com/kostum-maposatnij">Cotton suit</a></h4>
+                <p class="category"> <a href="http://cicon2.dev.soft-ko.com/kostum">костюм</a> </p>
+                <p class="description">Комплект, який скаладається з сорочки та широких rштанів в піжамному стилі. Контрастна вишивка C.ICO..</p>
+                                                <p class="price">
+                                    4500.00<span class="price__symbol">UAH</span>
+                                                      <span class="price-tax">Без ПДВ: 4500.00<span class="price__symbol">UAH</span></span>
+                                  </p>
+                        
+                <button type="button" class="button button-wishlist" data-toggle="tooltip" title="В закладки" onclick="wishlist.add('104');">
+                   <svg width="18" height="18" viewBox="0 0 30 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M14.7077 27.4057L15 27.6163L17.7132 24.9278L18.0264 25.3176C18.0265 25.3175 18.0266 25.3174 18.0267 25.3173C18.9831 24.5487 20.1884 23.4691 21.6398 22.0835L21.6399 22.0835L21.6432 22.0802C23.1042 20.6591 24.3685 19.2603 25.4342 17.8835C26.5095 16.4942 27.4512 14.9095 28.2612 13.1322L28.2623 13.1296C29.0808 11.3068 29.5 9.55564 29.5 7.8812C29.5 5.62107 28.8548 3.79745 27.506 2.48146C26.1588 1.14076 24.3003 0.5 22 0.5C20.2416 0.5 18.6592 0.970024 17.2691 1.91595L17.2691 1.91592L17.2637 1.91969C16.2742 2.61227 15.5168 3.46672 14.998 4.47887C14.4711 3.46455 13.6953 2.60974 12.6794 1.91781C11.3233 0.969453 9.75721 0.5 8 0.5C5.69975 0.5 3.84122 1.14076 2.49402 2.48144C1.14519 3.79743 0.5 5.62106 0.5 7.8812C0.5 9.55564 0.919159 11.3068 1.73767 13.1296L1.73766 13.1296L1.73882 13.1322C2.5488 14.9095 3.49053 16.4942 4.56585 17.8835C5.63154 19.2603 6.89584 20.6591 8.3568 22.0802L8.36016 22.0835C9.8105 23.4681 10.9953 24.5453 11.9119 25.3115L11.9189 25.3173L11.926 25.3228C12.871 26.0561 13.7982 26.7504 14.7077 27.4057Z" stroke="#A52020"></path>
+                  </svg>
+                </button>
+        
+              </div>
+              <div class="button-group">
+                <button type="button" onclick="cart.add('104');"><i class="fa fa-shopping-cart"></i> <span class="hidden-xs hidden-sm hidden-md">Купити</span></button>
+                <button type="button" data-toggle="tooltip" title="порівняння" onclick="compare.add('104');"><i class="fa fa-exchange"></i></button>
+              </div>
+            </div>
+          </div>
+                  <div class="product-layout col-md-4 col-xs-6">
+            <div class="product-thumb ">
+              <div class="image">
+                                <a href="http://cicon2.dev.soft-ko.com/kostum-terakot-"><img src="https://cicon2.dev.soft-ko.com/image/cache/catalog/product/000000478_1-300x300.jpg" alt="Cotton suit" title="Cotton suit" class="img-responsive" /></a>
+              </div>
+              <div class="caption">
+                <h4><a href="http://cicon2.dev.soft-ko.com/kostum-terakot-">Cotton suit</a></h4>
+                <p class="category"> <a href="http://cicon2.dev.soft-ko.com/kostum">костюм</a> </p>
+                <p class="description">Комплект, який скаладається з сорочки та широких rштанів в піжамному стилі. Контрастна вишивка C.ICO..</p>
+                                                <p class="price">
+                                    4500.00<span class="price__symbol">UAH</span>
+                                                      <span class="price-tax">Без ПДВ: 4500.00<span class="price__symbol">UAH</span></span>
+                                  </p>
+                        
+                <button type="button" class="button button-wishlist" data-toggle="tooltip" title="В закладки" onclick="wishlist.add('102');">
+                   <svg width="18" height="18" viewBox="0 0 30 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M14.7077 27.4057L15 27.6163L17.7132 24.9278L18.0264 25.3176C18.0265 25.3175 18.0266 25.3174 18.0267 25.3173C18.9831 24.5487 20.1884 23.4691 21.6398 22.0835L21.6399 22.0835L21.6432 22.0802C23.1042 20.6591 24.3685 19.2603 25.4342 17.8835C26.5095 16.4942 27.4512 14.9095 28.2612 13.1322L28.2623 13.1296C29.0808 11.3068 29.5 9.55564 29.5 7.8812C29.5 5.62107 28.8548 3.79745 27.506 2.48146C26.1588 1.14076 24.3003 0.5 22 0.5C20.2416 0.5 18.6592 0.970024 17.2691 1.91595L17.2691 1.91592L17.2637 1.91969C16.2742 2.61227 15.5168 3.46672 14.998 4.47887C14.4711 3.46455 13.6953 2.60974 12.6794 1.91781C11.3233 0.969453 9.75721 0.5 8 0.5C5.69975 0.5 3.84122 1.14076 2.49402 2.48144C1.14519 3.79743 0.5 5.62106 0.5 7.8812C0.5 9.55564 0.919159 11.3068 1.73767 13.1296L1.73766 13.1296L1.73882 13.1322C2.5488 14.9095 3.49053 16.4942 4.56585 17.8835C5.63154 19.2603 6.89584 20.6591 8.3568 22.0802L8.36016 22.0835C9.8105 23.4681 10.9953 24.5453 11.9119 25.3115L11.9189 25.3173L11.926 25.3228C12.871 26.0561 13.7982 26.7504 14.7077 27.4057Z" stroke="#A52020"></path>
+                  </svg>
+                </button>
+        
+              </div>
+              <div class="button-group">
+                <button type="button" onclick="cart.add('102');"><i class="fa fa-shopping-cart"></i> <span class="hidden-xs hidden-sm hidden-md">Купити</span></button>
+                <button type="button" data-toggle="tooltip" title="порівняння" onclick="compare.add('102');"><i class="fa fa-exchange"></i></button>
+              </div>
+            </div>
+          </div>
+                  <div class="product-layout col-md-4 col-xs-6">
+            <div class="product-thumb ">
+              <div class="image">
+                                <div class="sticker">
+                                    <div class="sticker-item sticker--sold-out">SOLD OUT</div>
+                                  </div>
+                                <a href="http://cicon2.dev.soft-ko.com/kotonovij-persik-sorti"><img src="https://cicon2.dev.soft-ko.com/image/cache/catalog/product/000000488_1-300x300.jpg" alt="Cotton suit" title="Cotton suit" class="img-responsive" /></a>
+              </div>
+              <div class="caption">
+                <h4><a href="http://cicon2.dev.soft-ko.com/kotonovij-persik-sorti">Cotton suit</a></h4>
+                <p class="category"> <a href="http://cicon2.dev.soft-ko.com/kostum">костюм</a> </p>
+                <p class="description">..</p>
+                                                <p class="price">
+                                    3500.00<span class="price__symbol">UAH</span>
+                                                      <span class="price-tax">Без ПДВ: 3500.00<span class="price__symbol">UAH</span></span>
+                                  </p>
+                        
+                <button type="button" class="button button-wishlist" data-toggle="tooltip" title="В закладки" onclick="wishlist.add('109');">
+                   <svg width="18" height="18" viewBox="0 0 30 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M14.7077 27.4057L15 27.6163L17.7132 24.9278L18.0264 25.3176C18.0265 25.3175 18.0266 25.3174 18.0267 25.3173C18.9831 24.5487 20.1884 23.4691 21.6398 22.0835L21.6399 22.0835L21.6432 22.0802C23.1042 20.6591 24.3685 19.2603 25.4342 17.8835C26.5095 16.4942 27.4512 14.9095 28.2612 13.1322L28.2623 13.1296C29.0808 11.3068 29.5 9.55564 29.5 7.8812C29.5 5.62107 28.8548 3.79745 27.506 2.48146C26.1588 1.14076 24.3003 0.5 22 0.5C20.2416 0.5 18.6592 0.970024 17.2691 1.91595L17.2691 1.91592L17.2637 1.91969C16.2742 2.61227 15.5168 3.46672 14.998 4.47887C14.4711 3.46455 13.6953 2.60974 12.6794 1.91781C11.3233 0.969453 9.75721 0.5 8 0.5C5.69975 0.5 3.84122 1.14076 2.49402 2.48144C1.14519 3.79743 0.5 5.62106 0.5 7.8812C0.5 9.55564 0.919159 11.3068 1.73767 13.1296L1.73766 13.1296L1.73882 13.1322C2.5488 14.9095 3.49053 16.4942 4.56585 17.8835C5.63154 19.2603 6.89584 20.6591 8.3568 22.0802L8.36016 22.0835C9.8105 23.4681 10.9953 24.5453 11.9119 25.3115L11.9189 25.3173L11.926 25.3228C12.871 26.0561 13.7982 26.7504 14.7077 27.4057Z" stroke="#A52020"></path>
+                  </svg>
+                </button>
+        
+              </div>
+              <div class="button-group">
+                <button type="button" onclick="cart.add('109');"><i class="fa fa-shopping-cart"></i> <span class="hidden-xs hidden-sm hidden-md">Купити</span></button>
+                <button type="button" data-toggle="tooltip" title="порівняння" onclick="compare.add('109');"><i class="fa fa-exchange"></i></button>
+              </div>
+            </div>
+          </div>
+                  <div class="product-layout col-md-4 col-xs-6">
+            <div class="product-thumb ">
+              <div class="image">
+                                <div class="sticker">
+                                    <div class="sticker-item sticker--sold-out">SOLD OUT</div>
+                                  </div>
+                                <a href="http://cicon2.dev.soft-ko.com/lon-zeleni-sorti"><img src="https://cicon2.dev.soft-ko.com/image/cache/catalog/product/000000495_1-300x300.jpg" alt="Linen suit" title="Linen suit" class="img-responsive" /></a>
+              </div>
+              <div class="caption">
+                <h4><a href="http://cicon2.dev.soft-ko.com/lon-zeleni-sorti">Linen suit</a></h4>
+                <p class="category"> <a href="http://cicon2.dev.soft-ko.com/kostum">костюм</a> </p>
+                <p class="description">..</p>
+                                                <p class="price">
+                                    3500.00<span class="price__symbol">UAH</span>
+                                                      <span class="price-tax">Без ПДВ: 3500.00<span class="price__symbol">UAH</span></span>
+                                  </p>
+                        
+                <button type="button" class="button button-wishlist" data-toggle="tooltip" title="В закладки" onclick="wishlist.add('115');">
+                   <svg width="18" height="18" viewBox="0 0 30 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M14.7077 27.4057L15 27.6163L17.7132 24.9278L18.0264 25.3176C18.0265 25.3175 18.0266 25.3174 18.0267 25.3173C18.9831 24.5487 20.1884 23.4691 21.6398 22.0835L21.6399 22.0835L21.6432 22.0802C23.1042 20.6591 24.3685 19.2603 25.4342 17.8835C26.5095 16.4942 27.4512 14.9095 28.2612 13.1322L28.2623 13.1296C29.0808 11.3068 29.5 9.55564 29.5 7.8812C29.5 5.62107 28.8548 3.79745 27.506 2.48146C26.1588 1.14076 24.3003 0.5 22 0.5C20.2416 0.5 18.6592 0.970024 17.2691 1.91595L17.2691 1.91592L17.2637 1.91969C16.2742 2.61227 15.5168 3.46672 14.998 4.47887C14.4711 3.46455 13.6953 2.60974 12.6794 1.91781C11.3233 0.969453 9.75721 0.5 8 0.5C5.69975 0.5 3.84122 1.14076 2.49402 2.48144C1.14519 3.79743 0.5 5.62106 0.5 7.8812C0.5 9.55564 0.919159 11.3068 1.73767 13.1296L1.73766 13.1296L1.73882 13.1322C2.5488 14.9095 3.49053 16.4942 4.56585 17.8835C5.63154 19.2603 6.89584 20.6591 8.3568 22.0802L8.36016 22.0835C9.8105 23.4681 10.9953 24.5453 11.9119 25.3115L11.9189 25.3173L11.926 25.3228C12.871 26.0561 13.7982 26.7504 14.7077 27.4057Z" stroke="#A52020"></path>
+                  </svg>
+                </button>
+        
+              </div>
+              <div class="button-group">
+                <button type="button" onclick="cart.add('115');"><i class="fa fa-shopping-cart"></i> <span class="hidden-xs hidden-sm hidden-md">Купити</span></button>
+                <button type="button" data-toggle="tooltip" title="порівняння" onclick="compare.add('115');"><i class="fa fa-exchange"></i></button>
+              </div>
+            </div>
+          </div>
+                  <div class="product-layout col-md-4 col-xs-6">
+            <div class="product-thumb ">
+              <div class="image">
+                                <div class="sticker">
+                                    <div class="sticker-item sticker--sold-out">SOLD OUT</div>
+                                  </div>
+                                <a href="http://cicon2.dev.soft-ko.com/lon-zeleni-stani"><img src="https://cicon2.dev.soft-ko.com/image/cache/catalog/product/000000494_1-300x300.jpg" alt="Linen suit" title="Linen suit" class="img-responsive" /></a>
+              </div>
+              <div class="caption">
+                <h4><a href="http://cicon2.dev.soft-ko.com/lon-zeleni-stani">Linen suit</a></h4>
+                <p class="category"> <a href="http://cicon2.dev.soft-ko.com/kostum">костюм</a> </p>
+                <p class="description">..</p>
+                                                <p class="price">
+                                    4500.00<span class="price__symbol">UAH</span>
+                                                      <span class="price-tax">Без ПДВ: 4500.00<span class="price__symbol">UAH</span></span>
+                                  </p>
+                        
+                <button type="button" class="button button-wishlist" data-toggle="tooltip" title="В закладки" onclick="wishlist.add('114');">
+                   <svg width="18" height="18" viewBox="0 0 30 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M14.7077 27.4057L15 27.6163L17.7132 24.9278L18.0264 25.3176C18.0265 25.3175 18.0266 25.3174 18.0267 25.3173C18.9831 24.5487 20.1884 23.4691 21.6398 22.0835L21.6399 22.0835L21.6432 22.0802C23.1042 20.6591 24.3685 19.2603 25.4342 17.8835C26.5095 16.4942 27.4512 14.9095 28.2612 13.1322L28.2623 13.1296C29.0808 11.3068 29.5 9.55564 29.5 7.8812C29.5 5.62107 28.8548 3.79745 27.506 2.48146C26.1588 1.14076 24.3003 0.5 22 0.5C20.2416 0.5 18.6592 0.970024 17.2691 1.91595L17.2691 1.91592L17.2637 1.91969C16.2742 2.61227 15.5168 3.46672 14.998 4.47887C14.4711 3.46455 13.6953 2.60974 12.6794 1.91781C11.3233 0.969453 9.75721 0.5 8 0.5C5.69975 0.5 3.84122 1.14076 2.49402 2.48144C1.14519 3.79743 0.5 5.62106 0.5 7.8812C0.5 9.55564 0.919159 11.3068 1.73767 13.1296L1.73766 13.1296L1.73882 13.1322C2.5488 14.9095 3.49053 16.4942 4.56585 17.8835C5.63154 19.2603 6.89584 20.6591 8.3568 22.0802L8.36016 22.0835C9.8105 23.4681 10.9953 24.5453 11.9119 25.3115L11.9189 25.3173L11.926 25.3228C12.871 26.0561 13.7982 26.7504 14.7077 27.4057Z" stroke="#A52020"></path>
+                  </svg>
+                </button>
+        
+              </div>
+              <div class="button-group">
+                <button type="button" onclick="cart.add('114');"><i class="fa fa-shopping-cart"></i> <span class="hidden-xs hidden-sm hidden-md">Купити</span></button>
+                <button type="button" data-toggle="tooltip" title="порівняння" onclick="compare.add('114');"><i class="fa fa-exchange"></i></button>
+              </div>
+            </div>
+          </div>
+                  <div class="product-layout col-md-4 col-xs-6">
+            <div class="product-thumb ">
+              <div class="image">
+                                <div class="sticker">
+                                    <div class="sticker-item sticker--sold-out">SOLD OUT</div>
+                                  </div>
+                                <a href="http://cicon2.dev.soft-ko.com/lon-malina-sorti"><img src="https://cicon2.dev.soft-ko.com/image/cache/catalog/product/000000525_1-300x300.jpg" alt="Linen suit" title="Linen suit" class="img-responsive" /></a>
+              </div>
+              <div class="caption">
+                <h4><a href="http://cicon2.dev.soft-ko.com/lon-malina-sorti">Linen suit</a></h4>
+                <p class="category"> <a href="http://cicon2.dev.soft-ko.com/kostum">костюм</a> </p>
+                <p class="description">..</p>
+                                                <p class="price">
+                                    3500.00<span class="price__symbol">UAH</span>
+                                                      <span class="price-tax">Без ПДВ: 3500.00<span class="price__symbol">UAH</span></span>
+                                  </p>
+                        
+                <button type="button" class="button button-wishlist" data-toggle="tooltip" title="В закладки" onclick="wishlist.add('121');">
+                   <svg width="18" height="18" viewBox="0 0 30 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M14.7077 27.4057L15 27.6163L17.7132 24.9278L18.0264 25.3176C18.0265 25.3175 18.0266 25.3174 18.0267 25.3173C18.9831 24.5487 20.1884 23.4691 21.6398 22.0835L21.6399 22.0835L21.6432 22.0802C23.1042 20.6591 24.3685 19.2603 25.4342 17.8835C26.5095 16.4942 27.4512 14.9095 28.2612 13.1322L28.2623 13.1296C29.0808 11.3068 29.5 9.55564 29.5 7.8812C29.5 5.62107 28.8548 3.79745 27.506 2.48146C26.1588 1.14076 24.3003 0.5 22 0.5C20.2416 0.5 18.6592 0.970024 17.2691 1.91595L17.2691 1.91592L17.2637 1.91969C16.2742 2.61227 15.5168 3.46672 14.998 4.47887C14.4711 3.46455 13.6953 2.60974 12.6794 1.91781C11.3233 0.969453 9.75721 0.5 8 0.5C5.69975 0.5 3.84122 1.14076 2.49402 2.48144C1.14519 3.79743 0.5 5.62106 0.5 7.8812C0.5 9.55564 0.919159 11.3068 1.73767 13.1296L1.73766 13.1296L1.73882 13.1322C2.5488 14.9095 3.49053 16.4942 4.56585 17.8835C5.63154 19.2603 6.89584 20.6591 8.3568 22.0802L8.36016 22.0835C9.8105 23.4681 10.9953 24.5453 11.9119 25.3115L11.9189 25.3173L11.926 25.3228C12.871 26.0561 13.7982 26.7504 14.7077 27.4057Z" stroke="#A52020"></path>
+                  </svg>
+                </button>
+        
+              </div>
+              <div class="button-group">
+                <button type="button" onclick="cart.add('121');"><i class="fa fa-shopping-cart"></i> <span class="hidden-xs hidden-sm hidden-md">Купити</span></button>
+                <button type="button" data-toggle="tooltip" title="порівняння" onclick="compare.add('121');"><i class="fa fa-exchange"></i></button>
+              </div>
+            </div>
+          </div>
+                  <div class="product-layout col-md-4 col-xs-6">
+            <div class="product-thumb ">
+              <div class="image">
+                                <div class="sticker">
+                                    <div class="sticker-item sticker--sold-out">SOLD OUT</div>
+                                  </div>
+                                <a href="http://cicon2.dev.soft-ko.com/lon-malina-stani-"><img src="https://cicon2.dev.soft-ko.com/image/cache/catalog/product/000000526_1-300x300.jpg" alt="Linen suit" title="Linen suit" class="img-responsive" /></a>
+              </div>
+              <div class="caption">
+                <h4><a href="http://cicon2.dev.soft-ko.com/lon-malina-stani-">Linen suit</a></h4>
+                <p class="category"> <a href="http://cicon2.dev.soft-ko.com/kostum">костюм</a> </p>
+                <p class="description">..</p>
+                                                <p class="price">
+                                    4500.00<span class="price__symbol">UAH</span>
+                                                      <span class="price-tax">Без ПДВ: 4500.00<span class="price__symbol">UAH</span></span>
+                                  </p>
+                        
+                <button type="button" class="button button-wishlist" data-toggle="tooltip" title="В закладки" onclick="wishlist.add('122');">
+                   <svg width="18" height="18" viewBox="0 0 30 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M14.7077 27.4057L15 27.6163L17.7132 24.9278L18.0264 25.3176C18.0265 25.3175 18.0266 25.3174 18.0267 25.3173C18.9831 24.5487 20.1884 23.4691 21.6398 22.0835L21.6399 22.0835L21.6432 22.0802C23.1042 20.6591 24.3685 19.2603 25.4342 17.8835C26.5095 16.4942 27.4512 14.9095 28.2612 13.1322L28.2623 13.1296C29.0808 11.3068 29.5 9.55564 29.5 7.8812C29.5 5.62107 28.8548 3.79745 27.506 2.48146C26.1588 1.14076 24.3003 0.5 22 0.5C20.2416 0.5 18.6592 0.970024 17.2691 1.91595L17.2691 1.91592L17.2637 1.91969C16.2742 2.61227 15.5168 3.46672 14.998 4.47887C14.4711 3.46455 13.6953 2.60974 12.6794 1.91781C11.3233 0.969453 9.75721 0.5 8 0.5C5.69975 0.5 3.84122 1.14076 2.49402 2.48144C1.14519 3.79743 0.5 5.62106 0.5 7.8812C0.5 9.55564 0.919159 11.3068 1.73767 13.1296L1.73766 13.1296L1.73882 13.1322C2.5488 14.9095 3.49053 16.4942 4.56585 17.8835C5.63154 19.2603 6.89584 20.6591 8.3568 22.0802L8.36016 22.0835C9.8105 23.4681 10.9953 24.5453 11.9119 25.3115L11.9189 25.3173L11.926 25.3228C12.871 26.0561 13.7982 26.7504 14.7077 27.4057Z" stroke="#A52020"></path>
+                  </svg>
+                </button>
+        
+              </div>
+              <div class="button-group">
+                <button type="button" onclick="cart.add('122');"><i class="fa fa-shopping-cart"></i> <span class="hidden-xs hidden-sm hidden-md">Купити</span></button>
+                <button type="button" data-toggle="tooltip" title="порівняння" onclick="compare.add('122');"><i class="fa fa-exchange"></i></button>
+              </div>
+            </div>
+          </div>
+                  <div class="product-layout col-md-4 col-xs-6">
+            <div class="product-thumb ">
+              <div class="image">
+                                <div class="sticker">
+                                    <div class="sticker-item sticker--sold-out">SOLD OUT</div>
+                                  </div>
+                                <a href="http://cicon2.dev.soft-ko.com/lon-oranz-sorti"><img src="https://cicon2.dev.soft-ko.com/image/cache/catalog/product/000000493_1-300x300.jpg" alt="Linen suit" title="Linen suit" class="img-responsive" /></a>
+              </div>
+              <div class="caption">
+                <h4><a href="http://cicon2.dev.soft-ko.com/lon-oranz-sorti">Linen suit</a></h4>
+                <p class="category"> <a href="http://cicon2.dev.soft-ko.com/kostum">костюм</a> </p>
+                <p class="description">..</p>
+                                                <p class="price">
+                                    3500.00<span class="price__symbol">UAH</span>
+                                                      <span class="price-tax">Без ПДВ: 3500.00<span class="price__symbol">UAH</span></span>
+                                  </p>
+                        
+                <button type="button" class="button button-wishlist" data-toggle="tooltip" title="В закладки" onclick="wishlist.add('113');">
+                   <svg width="18" height="18" viewBox="0 0 30 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M14.7077 27.4057L15 27.6163L17.7132 24.9278L18.0264 25.3176C18.0265 25.3175 18.0266 25.3174 18.0267 25.3173C18.9831 24.5487 20.1884 23.4691 21.6398 22.0835L21.6399 22.0835L21.6432 22.0802C23.1042 20.6591 24.3685 19.2603 25.4342 17.8835C26.5095 16.4942 27.4512 14.9095 28.2612 13.1322L28.2623 13.1296C29.0808 11.3068 29.5 9.55564 29.5 7.8812C29.5 5.62107 28.8548 3.79745 27.506 2.48146C26.1588 1.14076 24.3003 0.5 22 0.5C20.2416 0.5 18.6592 0.970024 17.2691 1.91595L17.2691 1.91592L17.2637 1.91969C16.2742 2.61227 15.5168 3.46672 14.998 4.47887C14.4711 3.46455 13.6953 2.60974 12.6794 1.91781C11.3233 0.969453 9.75721 0.5 8 0.5C5.69975 0.5 3.84122 1.14076 2.49402 2.48144C1.14519 3.79743 0.5 5.62106 0.5 7.8812C0.5 9.55564 0.919159 11.3068 1.73767 13.1296L1.73766 13.1296L1.73882 13.1322C2.5488 14.9095 3.49053 16.4942 4.56585 17.8835C5.63154 19.2603 6.89584 20.6591 8.3568 22.0802L8.36016 22.0835C9.8105 23.4681 10.9953 24.5453 11.9119 25.3115L11.9189 25.3173L11.926 25.3228C12.871 26.0561 13.7982 26.7504 14.7077 27.4057Z" stroke="#A52020"></path>
+                  </svg>
+                </button>
+        
+              </div>
+              <div class="button-group">
+                <button type="button" onclick="cart.add('113');"><i class="fa fa-shopping-cart"></i> <span class="hidden-xs hidden-sm hidden-md">Купити</span></button>
+                <button type="button" data-toggle="tooltip" title="порівняння" onclick="compare.add('113');"><i class="fa fa-exchange"></i></button>
+              </div>
+            </div>
+          </div>
+                  <div class="product-layout col-md-4 col-xs-6">
+            <div class="product-thumb ">
+              <div class="image">
+                                <div class="sticker">
+                                    <div class="sticker-item sticker--sold-out">SOLD OUT</div>
+                                  </div>
+                                <a href="http://cicon2.dev.soft-ko.com/lon-oranz-stani"><img src="https://cicon2.dev.soft-ko.com/image/cache/catalog/product/000000492_1-300x300.jpg" alt="Linen suit" title="Linen suit" class="img-responsive" /></a>
+              </div>
+              <div class="caption">
+                <h4><a href="http://cicon2.dev.soft-ko.com/lon-oranz-stani">Linen suit</a></h4>
+                <p class="category"> <a href="http://cicon2.dev.soft-ko.com/kostum">костюм</a> </p>
+                <p class="description">..</p>
+                                                <p class="price">
+                                    4500.00<span class="price__symbol">UAH</span>
+                                                      <span class="price-tax">Без ПДВ: 4500.00<span class="price__symbol">UAH</span></span>
+                                  </p>
+                        
+                <button type="button" class="button button-wishlist" data-toggle="tooltip" title="В закладки" onclick="wishlist.add('112');">
+                   <svg width="18" height="18" viewBox="0 0 30 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M14.7077 27.4057L15 27.6163L17.7132 24.9278L18.0264 25.3176C18.0265 25.3175 18.0266 25.3174 18.0267 25.3173C18.9831 24.5487 20.1884 23.4691 21.6398 22.0835L21.6399 22.0835L21.6432 22.0802C23.1042 20.6591 24.3685 19.2603 25.4342 17.8835C26.5095 16.4942 27.4512 14.9095 28.2612 13.1322L28.2623 13.1296C29.0808 11.3068 29.5 9.55564 29.5 7.8812C29.5 5.62107 28.8548 3.79745 27.506 2.48146C26.1588 1.14076 24.3003 0.5 22 0.5C20.2416 0.5 18.6592 0.970024 17.2691 1.91595L17.2691 1.91592L17.2637 1.91969C16.2742 2.61227 15.5168 3.46672 14.998 4.47887C14.4711 3.46455 13.6953 2.60974 12.6794 1.91781C11.3233 0.969453 9.75721 0.5 8 0.5C5.69975 0.5 3.84122 1.14076 2.49402 2.48144C1.14519 3.79743 0.5 5.62106 0.5 7.8812C0.5 9.55564 0.919159 11.3068 1.73767 13.1296L1.73766 13.1296L1.73882 13.1322C2.5488 14.9095 3.49053 16.4942 4.56585 17.8835C5.63154 19.2603 6.89584 20.6591 8.3568 22.0802L8.36016 22.0835C9.8105 23.4681 10.9953 24.5453 11.9119 25.3115L11.9189 25.3173L11.926 25.3228C12.871 26.0561 13.7982 26.7504 14.7077 27.4057Z" stroke="#A52020"></path>
+                  </svg>
+                </button>
+        
+              </div>
+              <div class="button-group">
+                <button type="button" onclick="cart.add('112');"><i class="fa fa-shopping-cart"></i> <span class="hidden-xs hidden-sm hidden-md">Купити</span></button>
+                <button type="button" data-toggle="tooltip" title="порівняння" onclick="compare.add('112');"><i class="fa fa-exchange"></i></button>
+              </div>
+            </div>
+          </div>
+                  <div class="product-layout col-md-4 col-xs-6">
+            <div class="product-thumb ">
+              <div class="image">
+                                <div class="sticker">
+                                    <div class="sticker-item sticker--sold-out">SOLD OUT</div>
+                                  </div>
+                                <a href="http://cicon2.dev.soft-ko.com/spidnica-top-bilij"><img src="https://cicon2.dev.soft-ko.com/image/cache/catalog/product/000000028_1-300x300.jpg" alt="костюм" title="костюм" class="img-responsive" /></a>
+              </div>
+              <div class="caption">
+                <h4><a href="http://cicon2.dev.soft-ko.com/spidnica-top-bilij">костюм</a></h4>
+                <p class="category"> <a href="http://cicon2.dev.soft-ko.com/kostum">костюм</a> </p>
+                <p class="description">Легкий літній костюм з тонкого коттону. Топ  має замочок в боковому шві. Спідниця на підкладці.    К..</p>
+                                                <p class="price">
+                                    750.00<span class="price__symbol">UAH</span>
+                                                      <span class="price-tax">Без ПДВ: 750.00<span class="price__symbol">UAH</span></span>
+                                  </p>
+                        
+                <button type="button" class="button button-wishlist" data-toggle="tooltip" title="В закладки" onclick="wishlist.add('3');">
+                   <svg width="18" height="18" viewBox="0 0 30 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M14.7077 27.4057L15 27.6163L17.7132 24.9278L18.0264 25.3176C18.0265 25.3175 18.0266 25.3174 18.0267 25.3173C18.9831 24.5487 20.1884 23.4691 21.6398 22.0835L21.6399 22.0835L21.6432 22.0802C23.1042 20.6591 24.3685 19.2603 25.4342 17.8835C26.5095 16.4942 27.4512 14.9095 28.2612 13.1322L28.2623 13.1296C29.0808 11.3068 29.5 9.55564 29.5 7.8812C29.5 5.62107 28.8548 3.79745 27.506 2.48146C26.1588 1.14076 24.3003 0.5 22 0.5C20.2416 0.5 18.6592 0.970024 17.2691 1.91595L17.2691 1.91592L17.2637 1.91969C16.2742 2.61227 15.5168 3.46672 14.998 4.47887C14.4711 3.46455 13.6953 2.60974 12.6794 1.91781C11.3233 0.969453 9.75721 0.5 8 0.5C5.69975 0.5 3.84122 1.14076 2.49402 2.48144C1.14519 3.79743 0.5 5.62106 0.5 7.8812C0.5 9.55564 0.919159 11.3068 1.73767 13.1296L1.73766 13.1296L1.73882 13.1322C2.5488 14.9095 3.49053 16.4942 4.56585 17.8835C5.63154 19.2603 6.89584 20.6591 8.3568 22.0802L8.36016 22.0835C9.8105 23.4681 10.9953 24.5453 11.9119 25.3115L11.9189 25.3173L11.926 25.3228C12.871 26.0561 13.7982 26.7504 14.7077 27.4057Z" stroke="#A52020"></path>
+                  </svg>
+                </button>
+        
+              </div>
+              <div class="button-group">
+                <button type="button" onclick="cart.add('3');"><i class="fa fa-shopping-cart"></i> <span class="hidden-xs hidden-sm hidden-md">Купити</span></button>
+                <button type="button" data-toggle="tooltip" title="порівняння" onclick="compare.add('3');"><i class="fa fa-exchange"></i></button>
+              </div>
+            </div>
+          </div>
+                  <div class="product-layout col-md-4 col-xs-6">
+            <div class="product-thumb ">
+              <div class="image">
+                                <a href="http://cicon2.dev.soft-ko.com/sport-stani-lajm"><img src="https://cicon2.dev.soft-ko.com/image/cache/catalog/product/000000502_1-300x300.jpg" alt="Sport suit" title="Sport suit" class="img-responsive" /></a>
+              </div>
+              <div class="caption">
+                <h4><a href="http://cicon2.dev.soft-ko.com/sport-stani-lajm">Sport suit</a></h4>
+                <p class="category"> <a href="http://cicon2.dev.soft-ko.com/kostum">костюм</a> </p>
+                <p class="description">..</p>
+                                                <p class="price">
+                                    3200.00<span class="price__symbol">UAH</span>
+                                                      <span class="price-tax">Без ПДВ: 3200.00<span class="price__symbol">UAH</span></span>
+                                  </p>
+                        
+                <button type="button" class="button button-wishlist" data-toggle="tooltip" title="В закладки" onclick="wishlist.add('118');">
+                   <svg width="18" height="18" viewBox="0 0 30 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M14.7077 27.4057L15 27.6163L17.7132 24.9278L18.0264 25.3176C18.0265 25.3175 18.0266 25.3174 18.0267 25.3173C18.9831 24.5487 20.1884 23.4691 21.6398 22.0835L21.6399 22.0835L21.6432 22.0802C23.1042 20.6591 24.3685 19.2603 25.4342 17.8835C26.5095 16.4942 27.4512 14.9095 28.2612 13.1322L28.2623 13.1296C29.0808 11.3068 29.5 9.55564 29.5 7.8812C29.5 5.62107 28.8548 3.79745 27.506 2.48146C26.1588 1.14076 24.3003 0.5 22 0.5C20.2416 0.5 18.6592 0.970024 17.2691 1.91595L17.2691 1.91592L17.2637 1.91969C16.2742 2.61227 15.5168 3.46672 14.998 4.47887C14.4711 3.46455 13.6953 2.60974 12.6794 1.91781C11.3233 0.969453 9.75721 0.5 8 0.5C5.69975 0.5 3.84122 1.14076 2.49402 2.48144C1.14519 3.79743 0.5 5.62106 0.5 7.8812C0.5 9.55564 0.919159 11.3068 1.73767 13.1296L1.73766 13.1296L1.73882 13.1322C2.5488 14.9095 3.49053 16.4942 4.56585 17.8835C5.63154 19.2603 6.89584 20.6591 8.3568 22.0802L8.36016 22.0835C9.8105 23.4681 10.9953 24.5453 11.9119 25.3115L11.9189 25.3173L11.926 25.3228C12.871 26.0561 13.7982 26.7504 14.7077 27.4057Z" stroke="#A52020"></path>
+                  </svg>
+                </button>
+        
+              </div>
+              <div class="button-group">
+                <button type="button" onclick="cart.add('118');"><i class="fa fa-shopping-cart"></i> <span class="hidden-xs hidden-sm hidden-md">Купити</span></button>
+                <button type="button" data-toggle="tooltip" title="порівняння" onclick="compare.add('118');"><i class="fa fa-exchange"></i></button>
+              </div>
+            </div>
+          </div>
+                  <div class="product-layout col-md-4 col-xs-6">
+            <div class="product-thumb ">
+              <div class="image">
+                                <a href="http://cicon2.dev.soft-ko.com/sport-stani-tifani"><img src="https://cicon2.dev.soft-ko.com/image/cache/catalog/product/000000503_1-300x300.jpg" alt="Sport suit" title="Sport suit" class="img-responsive" /></a>
+              </div>
+              <div class="caption">
+                <h4><a href="http://cicon2.dev.soft-ko.com/sport-stani-tifani">Sport suit</a></h4>
+                <p class="category"> <a href="http://cicon2.dev.soft-ko.com/kostum">костюм</a> </p>
+                <p class="description">..</p>
+                                                <p class="price">
+                                    3200.00<span class="price__symbol">UAH</span>
+                                                      <span class="price-tax">Без ПДВ: 3200.00<span class="price__symbol">UAH</span></span>
+                                  </p>
+                        
+                <button type="button" class="button button-wishlist" data-toggle="tooltip" title="В закладки" onclick="wishlist.add('119');">
+                   <svg width="18" height="18" viewBox="0 0 30 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M14.7077 27.4057L15 27.6163L17.7132 24.9278L18.0264 25.3176C18.0265 25.3175 18.0266 25.3174 18.0267 25.3173C18.9831 24.5487 20.1884 23.4691 21.6398 22.0835L21.6399 22.0835L21.6432 22.0802C23.1042 20.6591 24.3685 19.2603 25.4342 17.8835C26.5095 16.4942 27.4512 14.9095 28.2612 13.1322L28.2623 13.1296C29.0808 11.3068 29.5 9.55564 29.5 7.8812C29.5 5.62107 28.8548 3.79745 27.506 2.48146C26.1588 1.14076 24.3003 0.5 22 0.5C20.2416 0.5 18.6592 0.970024 17.2691 1.91595L17.2691 1.91592L17.2637 1.91969C16.2742 2.61227 15.5168 3.46672 14.998 4.47887C14.4711 3.46455 13.6953 2.60974 12.6794 1.91781C11.3233 0.969453 9.75721 0.5 8 0.5C5.69975 0.5 3.84122 1.14076 2.49402 2.48144C1.14519 3.79743 0.5 5.62106 0.5 7.8812C0.5 9.55564 0.919159 11.3068 1.73767 13.1296L1.73766 13.1296L1.73882 13.1322C2.5488 14.9095 3.49053 16.4942 4.56585 17.8835C5.63154 19.2603 6.89584 20.6591 8.3568 22.0802L8.36016 22.0835C9.8105 23.4681 10.9953 24.5453 11.9119 25.3115L11.9189 25.3173L11.926 25.3228C12.871 26.0561 13.7982 26.7504 14.7077 27.4057Z" stroke="#A52020"></path>
+                  </svg>
+                </button>
+        
+              </div>
+              <div class="button-group">
+                <button type="button" onclick="cart.add('119');"><i class="fa fa-shopping-cart"></i> <span class="hidden-xs hidden-sm hidden-md">Купити</span></button>
+                <button type="button" data-toggle="tooltip" title="порівняння" onclick="compare.add('119');"><i class="fa fa-exchange"></i></button>
+              </div>
+            </div>
+          </div>
+                  <div class="product-layout col-md-4 col-xs-6">
+            <div class="product-thumb ">
+              <div class="image">
+                                <div class="sticker">
+                                    <div class="sticker-item sticker--sold-out">SOLD OUT</div>
+                                  </div>
+                                <a href="http://cicon2.dev.soft-ko.com/sportivnij-z-sortam-matai"><img src="https://cicon2.dev.soft-ko.com/image/cache/catalog/product/000000483_1-300x300.jpg" alt="sport suit" title="sport suit" class="img-responsive" /></a>
+              </div>
+              <div class="caption">
+                <h4><a href="http://cicon2.dev.soft-ko.com/sportivnij-z-sortam-matai">sport suit</a></h4>
+                <p class="category"> <a href="http://cicon2.dev.soft-ko.com/kostum">костюм</a> </p>
+                <p class="description">..</p>
+                                                <p class="price">
+                                    2900.00<span class="price__symbol">UAH</span>
+                                                      <span class="price-tax">Без ПДВ: 2900.00<span class="price__symbol">UAH</span></span>
+                                  </p>
+                        
+                <button type="button" class="button button-wishlist" data-toggle="tooltip" title="В закладки" onclick="wishlist.add('105');">
+                   <svg width="18" height="18" viewBox="0 0 30 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M14.7077 27.4057L15 27.6163L17.7132 24.9278L18.0264 25.3176C18.0265 25.3175 18.0266 25.3174 18.0267 25.3173C18.9831 24.5487 20.1884 23.4691 21.6398 22.0835L21.6399 22.0835L21.6432 22.0802C23.1042 20.6591 24.3685 19.2603 25.4342 17.8835C26.5095 16.4942 27.4512 14.9095 28.2612 13.1322L28.2623 13.1296C29.0808 11.3068 29.5 9.55564 29.5 7.8812C29.5 5.62107 28.8548 3.79745 27.506 2.48146C26.1588 1.14076 24.3003 0.5 22 0.5C20.2416 0.5 18.6592 0.970024 17.2691 1.91595L17.2691 1.91592L17.2637 1.91969C16.2742 2.61227 15.5168 3.46672 14.998 4.47887C14.4711 3.46455 13.6953 2.60974 12.6794 1.91781C11.3233 0.969453 9.75721 0.5 8 0.5C5.69975 0.5 3.84122 1.14076 2.49402 2.48144C1.14519 3.79743 0.5 5.62106 0.5 7.8812C0.5 9.55564 0.919159 11.3068 1.73767 13.1296L1.73766 13.1296L1.73882 13.1322C2.5488 14.9095 3.49053 16.4942 4.56585 17.8835C5.63154 19.2603 6.89584 20.6591 8.3568 22.0802L8.36016 22.0835C9.8105 23.4681 10.9953 24.5453 11.9119 25.3115L11.9189 25.3173L11.926 25.3228C12.871 26.0561 13.7982 26.7504 14.7077 27.4057Z" stroke="#A52020"></path>
+                  </svg>
+                </button>
+        
+              </div>
+              <div class="button-group">
+                <button type="button" onclick="cart.add('105');"><i class="fa fa-shopping-cart"></i> <span class="hidden-xs hidden-sm hidden-md">Купити</span></button>
+                <button type="button" data-toggle="tooltip" title="порівняння" onclick="compare.add('105');"><i class="fa fa-exchange"></i></button>
+              </div>
+            </div>
+          </div>
+              </div>
+      <div class="row">
+        <div class="col-sm-12 text-right category__pagination"><ul class="pagination"><li class="active"><span>1</span></li><li><a href="http://cicon2.dev.soft-ko.com/kostum/?page=2">2</a></li><li><a href="http://cicon2.dev.soft-ko.com/kostum/?page=2"><svg width="7" height="14" viewBox="0 0 7 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.499999 12.8931L5.5 6.89307L0.5 0.893066" stroke="black"></path></svg></a></li></ul></div>
+      </div>
+                  </div>
+    </div>
+</div>
+<footer class="footer">
+  <div class="container-fluid footer__container">
+
+    <div class="row footer__row">
+
+      <div class="col-sm-4 footer__logo">
+        <a href="/">
+          <img src="image/catalog/cicon-logo.png" alt="C.icon" class="footer__logo-img">
+        </a>
+      </div>
+
+            <div class="col-sm-4 footer__info">
+        <h5 class="h5 title text-left">Контакти</h5>
+        <ul class="footer__list list">
+          <li class="list__item">ФОП Цимбала О.В.</li>
+          <li class="list__item"><a class="list__link" target="_blank" href="https://goo.gl/maps/aA3kyzNatUA4r3mj9" rel="noopener noreferrer">79008, Львівська обл., м.Львів, вул.Донцова, буд.2, кв.6</a></li>
+          <li class="list__item"> <span class="list__break">Адреса шоуруму</span> <a class="list__link" target="_blank" href="https://goo.gl/maps/Mr56WXE344B9pXmz5" rel="noopener noreferrer">м. Львів, вул. Чорновола, 16В</a></li>
+          <li class="list__item"> <a class="list__link" href="mailto:celebrityiconstore@gmail.com">celebrityiconstore@gmail.com</a> </li>
+          <li class="list__item"> <a class="list__link" href="tel:+380967700233">+380967700233</a> </li>
+          <li class="list__item"> <a class="list__link" href="tel:+380967700233">+380676494770</a> </li>
+        </ul>
+      </div>
+            <div class="col-sm-4">
+        <h5 class="h5 title text-left">Інформація</h5>
+        <ul class="list-unstyled footer__list list">
+                   <li class="list__item" ><a class="list__link" href="http://cicon2.dev.soft-ko.com/faq-ua">Допомога</a></li>
+                    <li class="list__item" ><a class="list__link" href="http://cicon2.dev.soft-ko.com/index.php?route=information/information&amp;information_id=8">Подарунковий сертифікат</a></li>
+                    <li class="list__item" ><a class="list__link" href="http://cicon2.dev.soft-ko.com/about-us">Про нас</a></li>
+                    <li class="list__item" ><a class="list__link" href="http://cicon2.dev.soft-ko.com/index.php?route=information/information&amp;information_id=6">Delivery Information</a></li>
+                    <li class="list__item" ><a class="list__link" href="http://cicon2.dev.soft-ko.com/index.php?route=information/information&amp;information_id=3">Privacy Policy</a></li>
+                    <li class="list__item" ><a class="list__link" href="http://cicon2.dev.soft-ko.com/index.php?route=information/information&amp;information_id=5">Terms &amp; Conditions</a></li>
+                              <li class="list__item" ><a class="list__link" href="/index.php?route=information/contact">Напиши нам</a></li>
+        </ul>
+      </div>
+      
+    </div>
+
+  </div>
+
+    <div id="toTop">
+      <span>
+        <img src="catalog/view/theme/cicon/image/arrow-top.svg" alt="Вгору">
+      </span>
+    </div>
+
+</footer>
+  
+
+<script src="/catalog/view/theme/cicon/js/common.min.js"></script>
+<script src="js/main.js"></script>
+
+</body></html>

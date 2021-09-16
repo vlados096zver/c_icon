@@ -1,0 +1,153 @@
+.category-wrapper {
+	padding-top: 100px;
+}
+
+.category__results {
+	color: #a7a7a7;
+	font-family: "opensans", sans-serif;
+	font-size: 14px;
+	line-height: 19px;
+	font-style: normal;
+	font-weight: 400;
+	letter-spacing: 0.1em;
+	line-height: 47px;
+}
+
+.category__sort .form-control {
+	float: right;
+	max-width: 200px;
+	background-image: url("../image/icon-arrow-down.png");
+	background-repeat: no-repeat;
+	background-position: 95% 45%;
+	background-size: 20px;
+	height: auto;
+	border-image: none;
+	border: 1px solid #fff;
+	box-shadow: none;
+	border-radius: 0;
+	font-size: 14px;
+	font-weight: 400;
+	color: #000;
+	letter-spacing: 0.1em;
+	padding: 11px 11px 13px;
+	appearance: none;
+}
+
+.category-sidebar {
+	display: flex;
+	flex-direction: column;
+}
+
+.category-sidebar .list-group-item {
+	display: inline-block;
+	width: max-content;
+	border: none;
+	border-radius: 0;
+	background-color: transparent;
+	font-weight: normal;
+	color: #534F4F;
+	font-family: "opensans", sans-serif;
+	text-shadow: none;
+	text-transform: uppercase;
+	font-size: 14px;
+	letter-spacing: 0.1em;
+	line-height: 1.2;
+	margin-bottom: 15px;
+	padding: 0;
+	transition: .2s ease color;
+}
+
+.category-sidebar .list-group-item:after {
+	position: absolute;
+	content: ' ';
+	bottom: 1px;
+	left: 0px;
+	width: 0px;
+	height: 1px;
+	background-color: #534F4F;
+	transition: 0.3s width;
+}
+
+.category-sidebar .list-group-item.active {
+	position: relative;
+	background-color: transparent;
+	border: none;
+	color: #E75A5A;
+}
+
+.category-sidebar .list-group-item.active:hover {
+	color: #E75A5A;
+	background-color: transparent;
+}
+
+.category-sidebar .list-group-item:hover {
+	background-color: transparent;
+}
+
+.category-sidebar .list-group-item:hover:not(.active):after {
+	width: 100%;
+}
+
+.category-sidebar .list-group-item.category-sidebar__title {
+	font-family: opensansSM;
+	font-weight: 600;
+}
+
+.category-sidebar .list-group-item.category-sidebar__title:hover {
+	color: #000;
+}
+
+.category-sidebar .list-group-item.category-sidebar__title:hover:after {
+	width: 0px;
+}
+
+.pagination li a,
+.pagination li span {
+	border: none;
+	border-radius: 0;
+	color: #000;
+	transition: .2s linear color;
+	font-size: 16px;
+	font-family: opensansM;
+	margin-right: 18px;
+}
+
+.pagination li a svg path,
+.pagination li span svg path {
+	transition: .2s linear stroke;
+}
+
+.pagination li a:hover,
+.pagination li a:focus,
+.pagination li span:hover,
+.pagination li span:focus {
+	color: #bf5c30;
+	background-color: transparent;
+}
+
+.pagination li a:hover svg path,
+.pagination li a:focus svg path,
+.pagination li span:hover svg path,
+.pagination li span:focus svg path {
+	stroke: #bf5c30;
+}
+
+.pagination li:last-child > a,
+.pagination li:last-child > span {
+	margin-right: 0;
+}
+
+.pagination .active span {
+	font-size: 16px;
+	font-family: opensansM;
+	background-color: transparent;
+	color: #bf5c30;
+	border: none;
+}
+
+.pagination .active span:hover,
+.pagination .active span:focus {
+	color: #bf5c30;
+	background-color: transparent;
+}
+

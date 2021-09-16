@@ -1,0 +1,12 @@
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 15 25" style="enable-background:new 0 0 15 25;" xml:space="preserve">
+					<style type="text/css">
+						.bttst0{fill:none;stroke:#A95530;stroke-width:0.75;stroke-miterlimit:10;}
+						.bttst1{fill:#FFFFFF;stroke:#A95530;stroke-width:0.75;stroke-miterlimit:10;}
+					</style>
+					<line class="bttst0" x1="7.3" y1="2" x2="7.3" y2="24"></line>
+					<path class="bttst1" d="M13.7,9"></path>
+					<path class="bttst1" d="M0.6,9"></path>
+					<path class="bttst0" d="M13.7,9"></path>
+					<path class="bttst0" d="M14.3,1.6"></path>
+					<polyline class="bttst0" points="14.1,9.1 7.3,2 0.6,9.1 "></polyline>
+					</svg>

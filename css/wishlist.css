@@ -1,0 +1,52 @@
+.h1-wishlist {
+	margin-bottom: 20px;
+	color: #000;
+	letter-spacing: 0.96px;
+}
+
+.wishlist .buttons.clearfix {
+	margin-right: 15px;
+}
+
+.wishlist__product .cart__item .cart__image.cart--image.cart__image--wishlist a img {
+	width: 100%;
+}
+
+.wishlist__product .cart__item .cart__price.cart--price.cart__price--wishlist .price .price__old {
+	text-decoration: line-through;
+}
+
+.wishlist__product .cart__item .cart__price.cart--price.cart__price--wishlist .price .price__new {
+	color: #b40808;
+}
+
+.wishlist__product .cart__item .cart__total-price.cart--total.cart__total-price--wishlist {
+	display: flex;
+	align-items: center;
+	padding-left: 0;
+	flex-basis: auto;
+}
+
+.wishlist__product .cart__item .cart__total-price.cart--total.cart__total-price--wishlist button {
+	padding: 6px 25px;
+	background-color: transparent;
+	border: 1px solid #000;
+	color: #000;
+}
+
+.wishlist__product .cart__item .cart__total-price.cart--total.cart__total-price--wishlist .product-stock {
+	text-transform: uppercase;
+	color: #a7a7a7;
+	letter-spacing: 1.4px;
+	margin-right: 10px;
+}
+
+.wishlist__product .cart__item .cart__remove.cart__remove--wishlist a {
+	border: 0;
+	box-shadow: none;
+}
+
+.wishlist__product .cart__item .cart__remove.cart__remove--wishlist a i {
+	font-size: 11px;
+}
+
