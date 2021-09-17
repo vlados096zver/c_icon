@@ -727,14 +727,13 @@
 }
 
 .footer {
-	padding-top: 30px;
-	margin-top: 30px;
+	margin-top: 57px;
 	border-top: 1px solid #e1e1e1;
 	background-color: #fff;
 }
 
 .footer__container {
-	padding: 65px 25px;
+	padding: 48px 25px;
 	padding-bottom: 0px;
 }
 
@@ -1009,7 +1008,7 @@
 }
 
 .product__btn .btn.btn-primary.btn-lg.btn-block.product__btn-cart {
-	background-color: #c2af96;
+	background-color: #323030;
 	background-image: none;
 	border: 0;
 	border-radius: 0;
@@ -2164,10 +2163,10 @@ h3,
 	text-transform: uppercase;
 	color: #fff;
 	text-shadow: none;
-	background-color: #c2af96;
+	background-color: #323030;
 	background-image: none;
 	box-shadow: none;
-	border: 1px solid #c2af96;
+	border: 1px solid #323030;
 	border-radius: 0;
 	vertical-align: middle;
 	padding: 8px 64px;
@@ -3181,6 +3180,7 @@ h3,
 }
 
 .footer__text {
+	max-width: 100%;
 	margin-bottom: 16px;
 }
 
